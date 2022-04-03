@@ -10,7 +10,7 @@ Quartz is designed to be effortless to deploy. If you forked and cloned Quartz d
 ### Enable GitHub Actions
 By default, GitHub disables workflows from running automatically on Forked Repostories. Head to the 'Actions' tab of your forked repository and Enable Workflows to setup deploying your Quartz site!
 
-![Enable GitHub Actions](notes/images/github-actions.png)*Enable GitHub Actions*
+![Enable GitHub Actions](github-actions.png)*Enable GitHub Actions*
 
 ### Enable GitHub Pages
 
@@ -19,7 +19,7 @@ Head to the 'Settings' tab of your forked repository and go to the 'Pages' tab.
 1. (IMPORTANT) Set the source to deploy from `master` (and not `hugo`) using `/ (root)`
 2. Set a custom domain here if you have one!
 
-![Enable GitHub Pages](/notes/images/github-pages.png)*Enable GitHub Pages*
+![Enable GitHub Pages](github-pages.png)*Enable GitHub Pages*
 
 ### Pushing Changes
 To see your changes on the internet, we need to push it them to GitHub. Quartz is a `git` repository so updating it is the same workflow as you would follow as if it were just a regular software project.

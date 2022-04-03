@@ -1,6 +1,5 @@
-baseURL = "https://quartz.jzhao.xyz/"
+baseURL = "https://ivanleomk.github.io/quartz"
 languageCode = "en-us"
-googleAnalytics = "G-XYFD95KB4J"
 pygmentsUseClasses = true
 relativeURLs = false
 disablePathToLower = true
