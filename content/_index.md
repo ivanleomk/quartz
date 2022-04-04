@@ -2,6 +2,16 @@
 title: 🪴 Ivan's Digital Garden
 ---
 
+Welcome to my Digital Garden, I've chosen Quartz as a framework to help consolidate 
+
+
+Here's a quick content map for your reference
+
+- [What I'm Reading](notes/whatIRead)
+- [Technical Stuff](notes/TechnicalStuff)
+
+I'll add on more things with time
 `
 
-We're testing that a new page will work [[Typescript]] in this case
+
+
