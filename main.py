@@ -168,9 +168,35 @@ if __name__ == '__main__':
     if os.path.exists(OUT_DIR):
         shutil.rmtree(OUT_DIR)
     
+    os.makedirs(OUT_DIR)
+    os.makedirs(os.path.join(OUT_DIR,"notes"))
+    highlights = os.listdir(os.path.join(IN_DIR,"highlights"))
+    highlights_path = os.path.join(OUT_DIR,"notes","highlights.md")
+
+    if os.path.exists(highlights_path):
+        os.remove(highlights_path)
+    
+
+
     files = [f for f in IN_DIR.rglob("*") if Path(f).suffix == '.md']
+    with open(highlights_path,"w") as file:
+        file.write("""---\ntitle: Reading Highlights\n---\n# Articles I've read so far\n\n""")
+        for highlight in highlights:
+            fileLink = f'- [{highlight}](highlights/{sanitize_string(highlight)})\n'
+            
+            file.write(fileLink)
+        file.close()
+    
+    
+    
     for file in files:
         sanitize_file_name(file)
+    
+    # We read in highlights folder
+    
+
+
+
 
     renamed_files = [f for f in OUT_DIR.rglob("*") if Path(f).suffix == '.md']
     for file in renamed_files:
