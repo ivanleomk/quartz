@@ -10,4 +10,3 @@ Here's a quick content map for your reference
 - [Technical Stuff](notes/technical-stuff.md)
 
 I'll add on more things with time
-`
