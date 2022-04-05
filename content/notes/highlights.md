@@ -1,7 +1,7 @@
 ---
 title: Reading Highlights
 ---
-# Articles I've read so far
+# A list of the 13 Articles I've read so far
 
 - [Building data-centric apps with a reactive relational database.md](highlights/building-data-centric-apps-with-a-reactive-relational-database.md)
 - [Why I got a PhD at age 61.md](highlights/why-i-got-a-phd-at-age-61.md)

@@ -179,8 +179,9 @@ if __name__ == '__main__':
 
 
     files = [f for f in IN_DIR.rglob("*") if Path(f).suffix == '.md']
+    
     with open(highlights_path,"w") as file:
-        file.write("""---\ntitle: Reading Highlights\n---\n# Articles I've read so far\n\n""")
+        file.write("---\ntitle: Reading Highlights\n---\n# A list of the {} Articles I've read so far\n\n".format(len(highlights)))
         for highlight in highlights:
             fileLink = f'- [{highlight}](highlights/{sanitize_string(highlight)})\n'
             
