@@ -15,7 +15,7 @@ jobs:
         uses: jackyzha0/hugo-obsidian@v2.12
         with:
           index: true
-          input: generated
+          input: content
           output: assets/indices
           root: .
 

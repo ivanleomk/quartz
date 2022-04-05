@@ -4,8 +4,8 @@ pygmentsUseClasses = true
 relativeURLs = false
 disablePathToLower = true
 ignoreFiles = [
-    "/generated/templates/*",
-    "/generated/private/*",
+    "/content/templates/*",
+    "/content/private/*",
 ]
 summaryLength = 20
 paginate = 10
