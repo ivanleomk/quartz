@@ -1,0 +1,127 @@
+{
+  "main": {
+    "id": "0bd90917929fc991",
+    "type": "split",
+    "children": [
+      {
+        "id": "0afa7159d5b0267d",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "notes/Technical Stuff.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "f04794dd49c2ac05",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "notes/What I'm Reading.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "c8eda89cf3a971b8",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "notes/What I'm Reading.md",
+            "mode": "preview",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "4241b627d089f6fc",
+    "type": "split",
+    "children": [
+      {
+        "id": "e984bc3fd48abde8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "77ed1d6ac9653b6b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "bd5ed16440ce1bca",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "03be793b38f485fc",
+    "type": "split",
+    "children": [
+      {
+        "id": "c3489e356afc2cfd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2cf37a0502b99646",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "notes/Technical Stuff.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "0afa7159d5b0267d",
+  "lastOpenFiles": [
+    "notes/Technical Stuff.md",
+    "_index.md",
+    "notes/What I'm Reading.md",
+    "notes/Typescript.md",
+    "notes/TradingBots.md",
+    "notes/Trading.md",
+    "notes/Some.md",
+    "highlights/Life is Short.md",
+    "highlights/Notes on Work.md",
+    "highlights/Why I got a PhD at age 61.md"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "accessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ5NzI4MDgyLCJqdGkiOiJhMzk3ZDhjN2M0NzA0NGE4OTIzYTUxOWJiY2EyNDllOSIsInVzZXJfaWQiOjQ2MTAyLCJjbGllbnRfdHlwZSI6ImludGVncmF0aW9uIiwibG9naW5fc2Vzc2lvbl9pZCI6IjJmMjA3NWE0LWIwNjMtNDhmYi1iYTQ5LTkwODdhZjYwMTVlNiJ9.5FhoWoduLB_Mf32tOBhVNDNcroFviDJ1n53NbkQYvvg",
+  "refreshToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY1NjgxMjg4MiwianRpIjoiNTU0MTVlMTNkNzFmNDQwYmI4ZWVmZDQwMjRlYjgxZTkiLCJ1c2VyX2lkIjo0NjEwMiwiY2xpZW50X3R5cGUiOiJpbnRlZ3JhdGlvbiIsImxvZ2luX3Nlc3Npb25faWQiOiIyZjIwNzVhNC1iMDYzLTQ4ZmItYmE0OS05MDg3YWY2MDE1ZTYifQ.aEqQugSNQ8nsBfwMCz54XQpIk91Yl32vO913_G6VtH0",
+  "qrSessionToken": "3579b8246b9f07bd54e52f97503b9e1d45cb4d6b2502628d99b5bb69e07ea0f1",
+  "dataDir": "./highlights",
+  "syncInterval": 720,
+  "hasCompletedInitialSetup": true,
+  "lastSync": "2022-04-04T13:48:46.073Z",
+  "isSyncing": false,
+  "contentMap": {
+    "Life is Short.md": "4_59985",
+    "Why I got a PhD at age 61.md": "4_3046453",
+    "Building data-centric apps with a reactive relational database.md": "4_2206724",
+    "Don't Write Just in Plain Text.md": "4_2203340",
+    "Choose Your Status Game Wisely.md": "4_2876962",
+    "Two vexing problems in functional programming.md": "4_3004920",
+    "Apple Is in a League of Its Own.md": "4_2886443",
+    "Notes on Work.md": "4_1874891"
+  }
+}
