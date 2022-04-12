@@ -1,16 +1,16 @@
 ---
 title: Reading Highlights
 ---
+A list of the 42 Articles I've read so far
 
-# A list of the 42 Articles I've read so far
+# Some Stats
 
-# Articles Read Per Month|Period|Amount Read|
-
+|Period|Amount Read|
 |----|----|
-|February 2022|1|
-|April 2022|41|
+|April 2022|42|
 
-- [A beginner’s guide to DAOs.md](highlights/a-beginners-guide-to-daos.md)
+
+ # Articles
 - [From The Desk Of A Trader #2.md](highlights/from-the-desk-of-a-trader-2.md)
 - [A Tale of Yak Shaving- Accidentally Making a Language, for an Engine, for a Game.md](highlights/a-tale-of-yak-shaving-accidentally-making-a-language-for-an-engine-for-a-game.md)
 - [A beginner's guide to social tokens.md](highlights/a-beginners-guide-to-social-tokens.md)
@@ -18,6 +18,7 @@ title: Reading Highlights
 - [#95- Are you baby- A litmus test.md](highlights/95-are-you-baby-a-litmus-test.md)
 - [Building data-centric apps with a reactive relational database.md](highlights/building-data-centric-apps-with-a-reactive-relational-database.md)
 - [When your manager isn't supporting you, build a Voltron.md](highlights/when-your-manager-isnt-supporting-you-build-a-voltron.md)
+- [A beginner’s guide to DAOs.md](highlights/a-beginners-guide-to-daos.md)
 - [Why I got a PhD at age 61.md](highlights/why-i-got-a-phd-at-age-61.md)
 - [How Elizabeth Loftus Changed the Meaning of Memory.md](highlights/how-elizabeth-loftus-changed-the-meaning-of-memory.md)
 - [How Women-and Their Hair-Transformed South Korea.md](highlights/how-women-and-their-hair-transformed-south-korea.md)

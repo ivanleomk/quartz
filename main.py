@@ -222,19 +222,20 @@ if __name__ == '__main__':
 
 
     with open(highlights_path,"w") as file:
-        file.write("---\ntitle: Reading Highlights\n---\n# A list of the {} Articles I've read so far\n\n".format(len(highlights)))
+        file.write("---\ntitle: Reading Highlights\n---\nA list of the {} Articles I've read so far\n\n".format(len(highlights)))
 
-        file.write("# Articles Read Per Month")
+        file.write("# Some Stats")
         months = sorted(counts.keys())
 
         if months:
-            file.write("|Period|Amount Read|\n|----|----|\n")
+            file.write("\n\n|Period|Amount Read|\n|----|----|\n")
 
         for month in months:
             key = datetime.strptime(month, '%d-%m-%Y').strftime("%B %Y")
             file.write(f'|{key}|{counts[month]}|\n')
 
 
+        file.write("\n\n # Articles\n")
         for highlight,date in sorted_highlights:
             formatted_date = date.strftime('%d-%m-%Y')
             fileLink = f'- [{highlight}](highlights/{sanitize_string(highlight)})\n'
