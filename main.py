@@ -123,7 +123,7 @@ def sanitize_file_contents(path, files):
     """
     with open(str(path), "r", encoding='utf-8') as f:
         old_text = f.read()
-
+    old_text = re.sub('---\ntitle:\s?#','---\ntitle: ',old_text)
     with open(str(path), "w", encoding='utf-8') as f:
         links = re.findall('\[\[[^\]]*\]\]', old_text)
         sanitized_text = old_text
@@ -133,6 +133,8 @@ def sanitize_file_contents(path, files):
             sanitized_text = re.sub(escaped_special_chars_link, sanitized_link, sanitized_text)
 
         f.write(sanitized_text)
+
+
 
 def sanitize_file_name(path):
     """
