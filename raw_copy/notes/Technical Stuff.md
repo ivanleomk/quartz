@@ -6,4 +6,6 @@ title: Technical Things
 I'm currenltly pre-occupied with learning about 
 
 - [[Typescript]]
-- [[TradingBots]]
+- [[Trading Bots]]
+- [[Testing With Cypress]]
+- [[Web3]]

@@ -1,17 +1,22 @@
+from collections import defaultdict
 from pathlib import Path
 import os
 import re
 import string
 import random
 import shutil 
+import csv
+from datetime import datetime
+
+
 
 
 ORIGINAL_IN_DIR = Path(os.path.join(Path.cwd(),"..","quartz","raw"))
 IN_DIR = Path(os.path.join(Path.cwd(),"..","quartz","raw_copy"))
 OUT_DIR = Path(os.path.join(Path.cwd(),"..","quartz","content"))
 DEFAULT_DRAFT = False
-
-
+TIMESTAMP_FILE = "./timestamp.csv"
+TIMESTAMP_HEADER = ["Name","Date"]
 
 # --- CHANGE THE ABOVE, NOTHING BELOW THIS LINE ---
 
@@ -162,6 +167,7 @@ def copy_and_overwrite(from_path, to_path):
         shutil.rmtree(to_path)
     shutil.copytree(from_path, to_path)
 
+
 if __name__ == '__main__':
     # First copy the obsidian
     copy_and_overwrite(ORIGINAL_IN_DIR,IN_DIR)
@@ -176,27 +182,78 @@ if __name__ == '__main__':
     if os.path.exists(highlights_path):
         os.remove(highlights_path)
     
+    existing_data = {}
+    new_data = {}
+    with open(TIMESTAMP_FILE,'r') as file:
+        csv_reader = csv.reader(file, delimiter=',')
+        for index,row in enumerate(csv_reader):
+            if index == 0:
+                continue
+            name,date = row
+            
+            formatted_date = datetime.strptime(date, '%d-%m-%Y')
+            
+            existing_data[name] = formatted_date
+    
+    if len(existing_data) == 0:
+        with open(TIMESTAMP_FILE,'w') as file:
+            writer = csv.writer(file)
+            writer.writerow(TIMESTAMP_HEADER)
+    
+        
+    for highlight in highlights:
+        if highlight not in existing_data:
+            formatted_date = datetime.today()
+            existing_data[highlight] = formatted_date
+            new_data[highlight] = formatted_date
 
 
     files = [f for f in IN_DIR.rglob("*") if Path(f).suffix == '.md']
     
+    sorted_highlights = [(highlight,existing_data[highlight]) for highlight in highlights]
+    sorted_highlights = sorted(sorted_highlights,key = lambda x : x[1])
+    
+    #We now do a count per month
+    counts = defaultdict(int)
+    for highlight in sorted_highlights:
+        date = highlight[1]
+        counts[f'01-{date.strftime("%m-%Y")}']+=1
+    
+
+
     with open(highlights_path,"w") as file:
         file.write("---\ntitle: Reading Highlights\n---\n# A list of the {} Articles I've read so far\n\n".format(len(highlights)))
-        for highlight in highlights:
-            fileLink = f'- [{highlight}](highlights/{sanitize_string(highlight)})\n'
-            
+
+        file.write("# Articles Read Per Month")
+        months = sorted(counts.keys())
+
+        if months:
+            file.write("|Period|Amount Read|\n|----|----|\n")
+
+        for month in months:
+            key = datetime.strptime(month, '%d-%m-%Y').strftime("%B %Y")
+            file.write(f'|{key}|{counts[month]}|\n')
+
+
+        for highlight,date in sorted_highlights:
+            formatted_date = date.strftime('%d-%m-%Y')
+            fileLink = f'- [{highlight}](highlights/{sanitize_string(highlight)}) (Read {formatted_date})\n'
             file.write(fileLink)
         file.close()
     
+
     
     
     for file in files:
         sanitize_file_name(file)
     
-    # We read in highlights folder
     
-
-
+    # We read in highlights folder
+    with open(TIMESTAMP_FILE,"a+") as file:
+        writer = csv.writer(file)
+        for highlight in new_data.keys():
+            formatted_date =  new_data[highlight].strftime('%d-%m-%Y')
+            writer.writerow([highlight,formatted_date])
 
 
     renamed_files = [f for f in OUT_DIR.rglob("*") if Path(f).suffix == '.md']

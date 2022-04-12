@@ -1,0 +1,72 @@
+---
+title: "PublicFeedback"
+---
+
+- Public Feedback in Singapore's consultative Authoritarianism
+	- The use of state-sponsored and controlled instituitions has been integral to the strategy of the PAP (Eg. 1985 Feedback Unit)
+	- The goal is to provide alternative chanels of political participation to opposition political parties and civil society activism 
+	- Strong gatekeeping which controls who can participate, how and on what. 
+	- Background
+		- Increasing capitalist growth in singapore resulting in more inequalities
+		- Rapid compounded dependence on foreign workers and immigrants result in a strain on social and physical infrastructure and a test of social cohesion
+	- Main Paper Goal : Mechanism of societal and administrative incorporation of this instituition has been integral in making sure that the PAP's efforts in promoting new modes of participation (MOP) have had to be adaptive and creative in the context of Singapore's dynamic political economy.
+	- Feedback Unit
+		- State based methods of participation are specifically designed to define and depoliticse the nature and limits of permissible conflict over public policy
+			- Goal was to maximize state control over what conflicts were structured in and out of permissible poilitical participation
+			- No real goal of investing in these forms of criticism and instead just wanted to co-opt them.
+		- Established in 1985 with the aim of taking suggestions from the puiblic on national policies 
+		- Implicit goal of using the citizen's feedback to promote its own policies on hand oinstead.
+		- Engagement is a tool that shapes the role of the citizen not as one with an equal right to shape policies of concern but merely as a provider of rational suggestion and debate
+		- General board which looks at the FU unit is generally part of the PAP's social and political establishment. 
+			- There is a deliberate lack of opposition politicans and independent civil society activists
+		- Process of participation fosters an acute compartmentalization of political issues which can only be conceived and implemented on a scale where technocratic rationality and controls over state and part were deeply embeeded and instituitionalized
+			- **Individual Participation** : The embrace of online channels of consultation and engagement were crucial to the FU's promotion of new modes of individual political participation. (Email accounted for 90% of all feedback)
+				- Potentially biased sample here since feedback was solicited from their own database where they chose demographics of interest to FU or a govenrment department or agency
+				- Various forms of individual participation provided sought to tap into issues of wide public concern but were used instead by the state as a means to frame and contain debate over these concerns
+					- **Eg.** General feedback channel gave citizens the liberty to submit comments and views beyond pescribed categories or topics but these were not publicized. Instead the FU would direct them to specific government departments or agencies for a private reply instead. 
+			- **Collective Participation** :
+				- Dialogue sessions were held which were in principle open to the general public but tended to be oraganized through select invitations to members of the people's forums or other strategic partners which would posit points that were conducive to the state's policies
+				- Tea Sessions  were meant to provide greater opportunities for participants to raise their own concerns and submit ideas. However, because of the disparity in individuals invited, these sessions were not conducive to cross-group interactions
+					- As a result, there were no opportunities for colaitions to form that might threathen the policies that the PAP was pushing for
+				- Feedback groups were chaired by people from private sectors that would undertake in-depth policy studies of their own choosing, culminating in policy proposal submissions to governments at annual conferences
+					- The PAP sponsored these groups by mantained the flexibility as to whether to take up their policies (Eg. 2002 Feedback group on best practices in Political governance for Singapore)
+		- Renamed to become REACH in 2006
+			- Increased the number of channels which were used in order to fully exploit electronic media and reach new and younger audiences. Most policies discussed were including immigration and foreign workers among others
+			- The PAP had a strong interest in limiting how these conflicts were defined and addressed, given the many entailed ideological or material interests inherent to signapore's model of State Capitalism.
+			- Introduced new schemes such as Policy Study Workshops (PSW) and the use of more social media accounts to help reach more individuals. These platforms expanded considerably to involve a wide range of ministers and issues as defined by REACH
+			- New Target of REACH
+				- That of PMETs which by then formed more than half of Singapore's workforce and were expected to rise to two-thirds of the total workforce by 2030
+	- Our Singapore Conversation (OSC)
+		- Started a 12-month enquiry encompassing extensive public feedback starting in October 2012
+		- An estimated 47,000 people participated in over 660 Dialogue Session involving forty organisations => PAP was aiming to project itself as genuinely interested in a diverse range of views and concerns among Singaporeans.
+		- They aimed to tackle a large variety of issues such as health care, housing, education and old age.
+			- 5 themes which they identified => Opportunity for all, communities with a purpose, assurance of basic needs, spirit for a compassionate society and trust in engagement with policy makers
+		- OSC was significant because it showed how the plurality and diversity of the City state had now rendered a single grand political narrative implausivble. 
+		- However the PAP chose alarge amount of govenrment and establishment people to dominate the OSC despite their assertion that the OSC committee members had been drawn from all walks of life to reflect the diversity of Society
+		- Overall goal was not to incoporate politcal opposition but to find those that might be influenced by them and provide alternative mediums
+			- It was therefore used as a non democratic alternative MOP to combative parlimentary policies
+			- The goal was to ensure that as many of the silent majority as possible could be persuaded that these state controlled feedback mechanisms offered a direct and effective avenue for engagement. 
+		- The final report had a glaring absence of policy recomendations that offered the govenrment maximum discretion in linking its policies with the OSC process.It could assert that citizens had a significant amoiunt of influence by working with the PAP and its feedback instituitions rather than the more independent, competitive alternatives.
+	- Backdrop
+		- 2006 : Singapore was facing rising living costs and inequalities, especially among working-class voters.
+			- Competitoin in manufacturing from lower-cost sites in China, India and Vietnam reduced employment opportunities for around 500,000 Singaporean workers with below secondary-educational levels in a restructuring economy
+			- WP proposed a new manifesto in return which aimed to directly reduce PAP structures of societal incorporation which 
+		- 2011 : The ruling part's share dropped to 60.1 per cent and this was the worst pefromance since 1965. They also lost their first GRC 
+			- Estimated poverty levels were around 10-12 percent and relative poverty levels were around twice that figure
+			- This was compounded by advances in social interaction which transformed the small and fragmented nature of social interactions which boosted individual expression as a political modus operandi
+				- Therefore started a new
+	- General Trends
+		- Increasing adoption of technological channels
+			- PAP has supported a shift online towards online channels as a way to control the dialogue around pertinent issues BUT it also comes at the risk of this technolog faciliating increased scrutiny and political competition with their own practices, policies and ideologies
+				- Therefore it has chosen to regulate internet usage through new laws and the enforcement of existing ones within cyberspace.
+	- Interesting Stuff
+		- Singapore Indian Development Association (SINDA) and Chinese Development Assistance Council (CDAC) were mainly established as way to discourage class-informed conceptions of poverty and disadvantage in favour of particularist identifies and related forms of political representation
+	- Conclusion
+		- OSC helped reduce the perception that PAP technocratic elite were aloof and uncaring about those left behind in Singapore's economic miracle
+		- Important avenue for PAP to better understand the different perspectives and anxieties of the electorate, enabling it to fin-tune rhetoric and choice of candidates and in turn improve its strategic thinking
+		- Indirectly helped to make it more risky for PAP critics to stray from the issues at hand and to act in a less constructive way
+			- PAP will in turn be able to decide the mediums and ways in which the "issues at hand" are being discussed and what is determined as "constructive or not". 
+			- Sample Policy - 2016 Contempt of Court  which lowers the threshold for punitive punishment in the face of bloggers and other civil society actors seeking to scrutinize public authorities.
+		- There will alwauys be the problem of political representation 
+		- Increased critical noise by PAP critics does not necessarily portend a more coherent and potent democratic reform movement. This requires a building of collective independent organizations and coalitions whcih are made difficult by Authoritatrian controls and related political economy relationships
+		- PAP's efforts to absorb more diverse forces into the orbit of societal and administrative incoorporation makes it more difficult 
