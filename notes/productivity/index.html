@@ -1,8 +1,8 @@
 <!doctype html><html lang=en>
 <head>
 <meta charset=utf-8>
-<meta name=description content="Metadata  URL: https://engineering.fb.com/2022/03/17/production-engineering/silent-errors/ Published Date: 2022-03-17 Author: Harish Dattatraya Dixit   Highlights  Sources of corruptions include datapath dependencies, temperature variance, and age, among other silicon factors.">
-<title>Detecting silent errors in the wild- Combining two novel approaches to quickly detect silent data corruptions at scale</title>
+<meta name=description content>
+<title>Productivity</title>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <link rel="shortcut icon" type=image/png href=/icon.png>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Sans+Pro:wght@400;600;700&family=Fira+Code:wght@400;700&display=swap" rel=stylesheet>
@@ -37,7 +37,7 @@
 </div>
 </header>
 <article>
-<h1>Detecting silent errors in the wild- Combining two novel approaches to quickly detect silent data corruptions at scale</h1>
+<h1>Productivity</h1>
 <p class=meta>
 Last updated Unknown
 </p>
@@ -45,38 +45,8 @@ Last updated Unknown
 </ul>
 <aside class=mainTOC>
 <h3>Table of Contents</h3>
-<nav id=TableOfContents>
-<ol>
-<li><a href=#metadata>Metadata</a></li>
-<li><a href=#highlights>Highlights</a></li>
-</ol>
-</nav>
+<nav id=TableOfContents></nav>
 </aside>
-<h2 id=metadata>Metadata</h2>
-<ul>
-<li>URL:
-<a href=https://engineering.fb.com/2022/03/17/production-engineering/silent-errors/ rel=noopener>https://engineering.fb.com/2022/03/17/production-engineering/silent-errors/</a></li>
-<li>Published Date: 2022-03-17</li>
-<li>Author:
-<a rel=noopener class="internal-link broken" data-src=None>Harish Dattatraya Dixit
-</a></li>
-</ul>
-<h2 id=highlights>Highlights</h2>
-<ul>
-<li>Sources of corruptions include datapath dependencies, temperature variance, and age, among other silicon factors. These errors do not leave any record or trace in system logs. As a result, silent errors stay undetected within workloads and can propagate across several services. In this paper, we describe testing strategies
-<ul>
-<li><strong>Note</strong>: Interesting problem that I didn’t think was actually a problem</li>
-</ul>
-</li>
-<li>However, once the components go through to a production fleet, it becomes really challenging to implement testing at scale. As</li>
-<li>Every iteration of a test takes time away from production workloads. Out-of-production testing has a ramp-up and ramp-down between switching from test to production workloads. In-production testing can leave residual configs that might adversely affect workload performance.</li>
-<li>With out-of-production testing, the challenge is utilizing downtimes from production effectively without affecting other maintenance tasks.</li>
-<li>We’ve observed that in-production testing can, within 15 days, detect 70 percent of the fleet data corruptions that opportunistic testing may take about 6 months to detect.</li>
-<li>We implement this mechanism using Fleetscanner, an internal facilitator tool for testing SDCs opportunistically.</li>
-<li>Opportunistic testing allows for tests to have longer runtimes (on the order of minutes), enabling a more intrusive nature of detection.</li>
-<li>There are fine-grained controls to enable more frequent opportunistic testing cadences on tiers and services that are sensitive.</li>
-<li>Because the testing here “ripples” through our infrastructure, the test times are 1,000x lower than the opportunistic test runtimes. Ripple tests are typically in the order of hundreds of milliseconds within the fleet. They are scheduled based on workload behavior and can be switched on and off per workload.</li>
-</ul>
 </article>
 <hr>
 <div class=page-end>
@@ -84,10 +54,7 @@ Last updated Unknown
 <h3>Backlinks</h3>
 <ul class=backlinks>
 <li>
-<a href=/quartz/notes/highlights>Reading Highlights</a>
-</li>
-<li>
-<a href=/quartz/notes/what-im-reading>What Im Reading</a>
+<a href=/quartz/notes/personal-stuff>Personal Stuff</a>
 </li>
 </ul>
 </div>
@@ -97,7 +64,7 @@ Last updated Unknown
 <div id=graph-container></div>
 <style>:root{--g-node:var(--secondary);--g-node-active:var(--primary);--g-node-inactive:var(--visited);--g-link:var(--outlinegray);--g-link-active:#5a7282}</style>
 <script src=https://ivanleomk.github.io/quartz/js/graph.27e8521c25c27c79dea35f434c486167.js></script>
-<script>drawGraph("https://ivanleomk.github.io/quartz/highlights/detecting-silent-errors-in-the-wild-combining-two-novel-approaches-to-quickly-detect-silent-data-corruptions-at-scale","https://ivanleomk.github.io/quartz",[{"/moc":"#4388cc"}],-1,!0,!1,!0)</script>
+<script>drawGraph("https://ivanleomk.github.io/quartz/notes/productivity","https://ivanleomk.github.io/quartz",[{"/moc":"#4388cc"}],-1,!0,!1,!0)</script>
 </div>
 </div>
 <div id=contact_buttons>
