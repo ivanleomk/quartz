@@ -10,6 +10,13 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8 #install the python needed
+      - name: execute py script # run the main.py to get the latest data
+        run: |
+          python main.py
 
       - name: Build Link Index
         uses: jackyzha0/hugo-obsidian@v2.12
