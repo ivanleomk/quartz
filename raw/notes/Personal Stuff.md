@@ -2,4 +2,7 @@
 title: "Personal Stuff"
 ---
 
-Here are some references
+See my current [[Protocol List]] and read more about topics I care about such as
+
+- [[Fitness]]
+- [[Productivity]]
