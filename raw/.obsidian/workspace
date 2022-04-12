@@ -7,8 +7,24 @@
         "id": "e2827dba9f8071d7",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "_index.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "89be013dcc5fa767",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "notes/Personal Stuff.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -65,6 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "notes/Personal Stuff.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -82,8 +99,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "e2827dba9f8071d7",
+  "active": "89be013dcc5fa767",
   "lastOpenFiles": [
+    "notes/Personal Stuff.md",
+    "_index.md",
     "notes/highlights.md",
     "notes/What I'm Reading.md",
     "highlights/Are we running out of resources-.md",
@@ -91,8 +110,6 @@
     "private/stolen_articles/Untitled.md",
     "private/CJK + Latex Support (测试).md",
     "private/editing.md",
-    "private/Governing as Gardening.md",
-    "private/PublicFeedback.md",
-    "notes/Trading Bots.md"
+    "private/Governing as Gardening.md"
   ]
 }
