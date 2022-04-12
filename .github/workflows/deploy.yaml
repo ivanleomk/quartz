@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-      - name: setup python
+      - name: Configure Python On the Runner
         uses: actions/setup-python@v2
         with:
           python-version: 3.8 #install the python needed
-      - name: execute py script # run the main.py to get the latest data
+      - name: Build and generate .md files with the right links # run the main.py to get the latest data
         run: |
           python main.py
 
@@ -41,4 +41,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: master # deploying branch
-          cname: quartz.jzhao.xyz
