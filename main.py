@@ -237,7 +237,7 @@ if __name__ == '__main__':
 
         for highlight,date in sorted_highlights:
             formatted_date = date.strftime('%d-%m-%Y')
-            fileLink = f'- [{highlight}](highlights/{sanitize_string(highlight)}) (Read {formatted_date})\n'
+            fileLink = f'- [{highlight}](highlights/{sanitize_string(highlight)})\n'
             file.write(fileLink)
         file.close()
     
