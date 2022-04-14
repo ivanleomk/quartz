@@ -8,6 +8,9 @@ title: What I'm Reading
 To see a list of all the articles which i've read recently check out my reading [[highlights]].
 Articles on this page however are ones which I would recommend to friends. I might link them at some point to other bits of info which I've considered but no guarantees
 
+Here are some summaries of texts I've read
+- [[Ancient Roman History in a Nutshell]]
+
 ## Mindset
 
 - [[Choose Your Status Game Wisely]]

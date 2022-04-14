@@ -4,7 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "e2827dba9f8071d7",
+        "id": "47cc47510e97bc0b",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "notes/What I'm Reading.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "e318f42b0eb536f4",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -16,36 +28,12 @@
         }
       },
       {
-        "id": "89be013dcc5fa767",
+        "id": "c1cd10a8bef6191d",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "notes/Personal Stuff.md",
-            "mode": "source",
-            "source": false
-          }
-        }
-      },
-      {
-        "id": "f0a96c0eae352b12",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "notes/Fitness.md",
-            "mode": "source",
-            "source": false
-          }
-        }
-      },
-      {
-        "id": "31f48dd2cfe278bc",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "notes/Productivity.md",
+            "file": "Project Ideas.md",
             "mode": "source",
             "source": false
           }
@@ -105,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/Productivity.md",
+                "file": "Project Ideas.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,17 +111,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "31f48dd2cfe278bc",
+  "active": "c1cd10a8bef6191d",
   "lastOpenFiles": [
-    "notes/Productivity.md",
-    "notes/Fitness.md",
-    "notes/Personal Stuff.md",
+    "Project Ideas.md",
     "_index.md",
-    "notes/highlights.md",
+    "private/Ancient Roman History in a Nutshell.md",
     "notes/What I'm Reading.md",
+    "notes/Productivity.md",
+    "notes/Personal Stuff.md",
+    "notes/Fitness.md",
+    "notes/highlights.md",
     "highlights/Are we running out of resources-.md",
-    "private/stolen_articles/BowTiedFox/Productivity Masterclass.md",
-    "private/stolen_articles/Untitled.md",
-    "private/CJK + Latex Support (测试).md"
+    "private/stolen_articles/BowTiedFox/Productivity Masterclass.md"
   ]
 }

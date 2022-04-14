@@ -10,6 +10,7 @@ Here's a quick content map for your reference
 - [[What I'm Reading]]
 - [[Technical Stuff]]
 - [[Personal Stuff]]
+- [[Project Ideas]]
 
 I'll add on more things with time
 `

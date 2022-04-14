@@ -5,7 +5,7 @@
   "dataDir": "./highlights",
   "syncInterval": 720,
   "hasCompletedInitialSetup": true,
-  "lastSync": "2022-04-12T02:46:15.455Z",
+  "lastSync": "2022-04-14T05:33:13.045Z",
   "isSyncing": false,
   "contentMap": {
     "Life is Short.md": "4_59985",
@@ -49,6 +49,14 @@
     "A beginner's guide to DeFi.md": "4_166505",
     "Code rewrites and joint cognitive systems.md": "4_3378735",
     "A Complete Guide to Radix and the XRD token..md": "4_3340992",
-    "Farewell, Big Data.md": "4_1986870"
+    "Farewell, Big Data.md": "4_1986870",
+    "How to use type guards in TypeScript.md": "4_2955988",
+    "The Product-Minded Software Engineer.md": "4_51597",
+    "On Friendship and on Finding Your People.md": "4_115925",
+    "The Scoop- Inside Fast’s Rapid Collapse.md": "4_3242931",
+    "A Masterclass on Performance Engineering.md": "4_3417823",
+    "Opportunity, Risks and Going Down the Rabbit Hole.md": "4_3498754",
+    "Decentralized Finance - the High Level Basics.md": "4_444310",
+    "Getting Your First Career- We All Start Somewhere.md": "4_310895"
   }
 }
