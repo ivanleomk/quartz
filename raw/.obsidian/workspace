@@ -4,11 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "939cfafadb51df43",
+        "id": "745d1f4d14a13c26",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "notes/Web3.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -65,6 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "notes/Web3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -79,20 +84,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
-  "active": "939cfafadb51df43",
+  "active": "745d1f4d14a13c26",
   "lastOpenFiles": [
+    "notes/Web3.md",
+    "notes/Fitness.md",
+    "notes/Hormonal Health.md",
+    "notes/Cardio 101.md",
+    "notes/Dieting 101.md",
+    "notes/Personal Stuff.md",
     "_index.md",
     "notes/What I'm Reading.md",
     "private/Ancient Roman History in a Nutshell.md",
-    "Project Ideas.md",
-    "notes/Productivity.md",
-    "notes/Personal Stuff.md",
-    "notes/Fitness.md",
-    "notes/highlights.md",
-    "highlights/Are we running out of resources-.md",
-    "private/stolen_articles/BowTiedFox/Productivity Masterclass.md"
+    "Project Ideas.md"
   ]
 }

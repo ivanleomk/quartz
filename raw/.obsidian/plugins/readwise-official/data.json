@@ -1,0 +1,17 @@
+{
+  "token": "JokPfhiQSBXZt94JjfbL1FNNehI7oO0NPdK4PrwVN6GN3yabI5",
+  "readwiseDir": "Readwise",
+  "frequency": "0",
+  "triggerOnLoad": true,
+  "isSyncing": false,
+  "lastSyncFailed": false,
+  "lastSavedStatusID": 3311794,
+  "currentSyncStatusID": 0,
+  "refreshBooks": false,
+  "booksToRefresh": [],
+  "booksIDsMap": {
+    "Readwise/./Tweets/Tweets From Trung Phan 🇨🇦.md": "9913278",
+    "Readwise/./Books/Hidden Games.md": "14682176"
+  },
+  "reimportShowConfirmation": true
+}
