@@ -5,7 +5,7 @@
   "dataDir": "./highlights",
   "syncInterval": 720,
   "hasCompletedInitialSetup": true,
-  "lastSync": "2022-04-14T05:33:13.045Z",
+  "lastSync": "2022-04-16T03:07:53.261Z",
   "isSyncing": false,
   "contentMap": {
     "Life is Short.md": "4_59985",
@@ -57,6 +57,11 @@
     "A Masterclass on Performance Engineering.md": "4_3417823",
     "Opportunity, Risks and Going Down the Rabbit Hole.md": "4_3498754",
     "Decentralized Finance - the High Level Basics.md": "4_444310",
-    "Getting Your First Career- We All Start Somewhere.md": "4_310895"
+    "Getting Your First Career- We All Start Somewhere.md": "4_310895",
+    "Risk Management- What Would You Do In My Situation-.md": "4_569152",
+    "BowTiedBull FAQ - Will Be Updated Over Time.md": "4_251132",
+    "DeFi- In Simple Photos and How to Make Your First Transaction!.md": "4_3498753",
+    "Change Your Psychology and the Cartoon 10 Commandments.md": "4_1169280",
+    "Crypto vs. Global Money Supply and The 2001 Tech Bubble.md": "4_413706"
   }
 }
