@@ -1,0 +1,403 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta name=description content="Initialising A Program We initialise a program by defining the compiler version and then initialising contracts
+1 2 3 4 5 6 7  // Define the compiler version you would be using pragma solidity ^0.">
+<title>Solidity</title>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel="shortcut icon" type=image/png href=/icon.png>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Sans+Pro:wght@400;600;700&family=Fira+Code:wght@400;700&display=swap" rel=stylesheet>
+<link href=https://ivanleomk.github.io/quartz/styles.39ca5b76d65c990dd43f1cd6a8d8b907.min.css rel=stylesheet>
+<script src=https://ivanleomk.github.io/quartz/js/darkmode.46b07878b7f5d9e26ad7a3c40f8a0605.min.js></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css integrity=sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs crossorigin=anonymous>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js integrity=sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:!0},{left:'$',right:'$',display:!1}],throwOnError:!1})})</script>
+<script>const BASE_URL="https://ivanleomk.github.io/quartz",fetchData=Promise.all([fetch("https://ivanleomk.github.io/quartz/indices/linkIndex.a739ddadb9c42cd0df3dde18b9440507.min.json").then(a=>a.json()).then(a=>({index:a.index,links:a.links})),fetch("https://ivanleomk.github.io/quartz/indices/contentIndex.b1e39ec68f3c0076d82e15e3598a82b7.min.json").then(a=>a.json())]).then(([{index:a,links:b},c])=>({index:a,links:b,content:c}))</script>
+</head>
+<body>
+<div id=search-container>
+<div id=search-space>
+<input autocomplete=off id=search-bar name=search type=text aria-label=Search placeholder="Search for something...">
+<div id=results-container>
+</div>
+</div>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js integrity="sha256-i3A0NZGkhsKjVMzFxv3ksk0DZh3aXqu0l49Bbh0MdjE=" crossorigin=anonymous defer></script>
+<script defer src=https://ivanleomk.github.io/quartz/js/search.bc849b857f2c1b822264d40635bb67b6.min.js></script>
+<div class=singlePage>
+<header>
+<h1 id=page-title><a href=https://ivanleomk.github.io/quartz>Ivan's Digital Garden</a></h1><svg tabindex="0" id="search-icon" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc">Icon to open search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg>
+<div class=spacer></div>
+<div class=darkmode>
+<input class=toggle id=darkmode-toggle type=checkbox tabindex=-1>
+<label id=toggle-label-light for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="dayIcon" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35"><title>Light Mode</title><path d="M6 17.5C6 16.672 5.328 16 4.5 16h-3C.672 16 0 16.672.0 17.5S.672 19 1.5 19h3C5.328 19 6 18.328 6 17.5zM7.5 26c-.414.0-.789.168-1.061.439l-2 2C4.168 28.711 4 29.086 4 29.5 4 30.328 4.671 31 5.5 31c.414.0.789-.168 1.06-.44l2-2C8.832 28.289 9 27.914 9 27.5 9 26.672 8.329 26 7.5 26zm10-20C18.329 6 19 5.328 19 4.5v-3C19 .672 18.329.0 17.5.0S16 .672 16 1.5v3C16 5.328 16.671 6 17.5 6zm10 3c.414.0.789-.168 1.06-.439l2-2C30.832 6.289 31 5.914 31 5.5 31 4.672 30.329 4 29.5 4c-.414.0-.789.168-1.061.44l-2 2C26.168 6.711 26 7.086 26 7.5 26 8.328 26.671 9 27.5 9zM6.439 8.561C6.711 8.832 7.086 9 7.5 9 8.328 9 9 8.328 9 7.5c0-.414-.168-.789-.439-1.061l-2-2C6.289 4.168 5.914 4 5.5 4 4.672 4 4 4.672 4 5.5c0 .414.168.789.439 1.06l2 2.001zM33.5 16h-3c-.828.0-1.5.672-1.5 1.5s.672 1.5 1.5 1.5h3c.828.0 1.5-.672 1.5-1.5S34.328 16 33.5 16zM28.561 26.439C28.289 26.168 27.914 26 27.5 26c-.828.0-1.5.672-1.5 1.5.0.414.168.789.439 1.06l2 2C28.711 30.832 29.086 31 29.5 31c.828.0 1.5-.672 1.5-1.5.0-.414-.168-.789-.439-1.061l-2-2zM17.5 29c-.829.0-1.5.672-1.5 1.5v3c0 .828.671 1.5 1.5 1.5s1.5-.672 1.5-1.5v-3C19 29.672 18.329 29 17.5 29zm0-22C11.71 7 7 11.71 7 17.5S11.71 28 17.5 28 28 23.29 28 17.5 23.29 7 17.5 7zm0 18c-4.136.0-7.5-3.364-7.5-7.5s3.364-7.5 7.5-7.5 7.5 3.364 7.5 7.5S21.636 25 17.5 25z"/></svg>
+</label>
+<label id=toggle-label-dark for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="nightIcon" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'"><title>Dark Mode</title><path d="M96.76 66.458c-.853-.852-2.15-1.064-3.23-.534-6.063 2.991-12.858 4.571-19.655 4.571C62.022 70.495 50.88 65.88 42.5 57.5 29.043 44.043 25.658 23.536 34.076 6.47c.532-1.08.318-2.379-.534-3.23-.851-.852-2.15-1.064-3.23-.534-4.918 2.427-9.375 5.619-13.246 9.491-9.447 9.447-14.65 22.008-14.65 35.369.0 13.36 5.203 25.921 14.65 35.368s22.008 14.65 35.368 14.65c13.361.0 25.921-5.203 35.369-14.65 3.872-3.871 7.064-8.328 9.491-13.246C97.826 68.608 97.611 67.309 96.76 66.458z"/></svg>
+</label>
+</div>
+</header>
+<article>
+<h1>Solidity</h1>
+<p class=meta>
+Last updated Unknown
+</p>
+<ul class=tags>
+</ul>
+<aside class=mainTOC>
+<h3>Table of Contents</h3>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#variable-storage>Variable Storage</a></li>
+<li><a href=#generic-values>Generic Values</a></li>
+<li><a href=#structs>Structs</a></li>
+<li><a href=#arrays>Arrays</a></li>
+</ol>
+<ol>
+<li><a href=#view-functions>View Functions</a></li>
+<li><a href=#return-types>Return Types</a></li>
+<li><a href=#calling-other-functions>Calling Other Functions</a></li>
+<li><a href=#function-invariants>Function Invariants</a></li>
+<li><a href=#events>Events</a></li>
+</ol>
+<ol>
+<li><a href=#interfaces>Interfaces</a></li>
+</ol>
+</nav>
+</aside>
+<h1 id=initialising-a-program>Initialising A Program</h1>
+<p>We initialise a program by defining the compiler version and then initialising contracts</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-solidity data-lang=solidity><span class=c1>// Define the compiler version you would be using
+</span><span class=c1></span><span class=k>pragma solidity</span> <span class=o>^</span><span class=mi>0</span><span class=p>.</span><span class=mi>8</span><span class=p>.</span><span class=mi>10</span><span class=p>;</span>
+
+<span class=c1>// Start by creating a contract named HelloWorld
+</span><span class=c1></span><span class=kd>contract</span> <span class=nc>HelloWorld</span> <span class=p>{</span>
+
+<span class=p>}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h1 id=variables>Variables</h1>
+<h2 id=variable-storage>Variable Storage</h2>
+<p>In solidity we have two kinds of storage for our variables, <code>Storage</code> and <code>Memory</code>. Storage refers to variables stored permanently on the blockchain. Memory variables are temporary, and are erased between external function calls to your contract. Think of it like your computer&rsquo;s hard disk vs RAM.</p>
+<p>State variables (declared outside contracts) are by default <code>Storage</code> and variables declared inside functions are by default <code>Memory</code> type.</p>
+<h2 id=generic-values>Generic Values</h2>
+<p>We can initialise variables by simply declaring them. Sample variables types include</p>
+<ul>
+<li><code>uint</code></li>
+</ul>
+<h2 id=structs>Structs</h2>
+<p>We can also create structs which will allow us to be able to create objects that have their own unique properties</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-solidity data-lang=solidity><span class=kd>struct</span> <span class=nc>Zombie</span> <span class=p>{</span>
+	<span class=kt>string</span> <span class=nb>name</span><span class=p>;</span>
+	<span class=kt>uint</span> <span class=n>dna</span><span class=p>;</span>
+<span class=p>}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id=arrays>Arrays</h2>
+<p>Solidity supports two kinds of arrays, dynamic and static arrays</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-solidity data-lang=solidity><span class=c1>// Array with a fixed length of 2 elements:
+</span><span class=c1></span><span class=kt>uint</span><span class=p>[</span><span class=mi>2</span><span class=p>]</span> <span class=n>fixedArray</span><span class=p>;</span>
+
+<span class=c1>// another fixed Array, can contain 5 strings:
+</span><span class=c1></span><span class=kt>string</span><span class=p>[</span><span class=mi>5</span><span class=p>]</span> <span class=n>stringArray</span><span class=p>;</span>
+
+<span class=c1>// a dynamic Array - has no fixed size, can keep growing:
+</span><span class=c1></span><span class=kt>uint</span><span class=p>[]</span> <span class=n>dynamicArray</span><span class=p>;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>We can also for instance create an array of structs</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-solidity data-lang=solidity><span class=n>Zombie</span><span class=p>[]</span> <span class=n>zombies</span><span class=p>;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h1 id=functions>Functions</h1>
+<p>Well, there are two ways in which you can pass an argument to a Solidity function:</p>
+<ul>
+<li><code>By value</code> : Create a copy of the parameter&rsquo;s value and pass to the function. Our function then modifies the value wtihout modifying the initial parameter</li>
+<li><code>By Reference</code> : Our function takes a reference of the parameter. Any changes to the parameter will therefore be reflected</li>
+</ul>
+<p>We can declare a function as seen below. Note that all functions are public by default. We can delcare a function as private by using the <code>private</code> key word.</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-solidity data-lang=solidity><span class=kd>function</span> <span class=nf>_createZombie</span><span class=p>(</span><span class=kt>string</span> <span class=k>memory</span> <span class=n>_name</span><span class=p>,</span> <span class=kt>uint</span> <span class=n>_dna</span><span class=p>)</span> <span class=k>private</span> <span class=p>{</span>
+    <span class=n>zombies</span><span class=p>.</span><span class=n>push</span><span class=p>(</span><span class=n>Zombie</span><span class=p>(</span><span class=n>_name</span><span class=p>,</span> <span class=n>_dna</span><span class=p>));</span>
+<span class=p>}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id=view-functions>View Functions</h2>
+<p>We can also declare our</p>
+<p>So in this case we could declare it as a <strong><em>view</em></strong> function, meaning it&rsquo;s only viewing the data but not modifying it:</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-solidity data-lang=solidity><span class=kd>function</span> <span class=nf>sayHello</span><span class=p>()</span> <span class=k>public</span> <span class=k>view</span> <span class=k>returns</span> <span class=p>(</span><span class=kt>string</span> <span class=k>memory</span><span class=p>)</span> <span class=p>{</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id=return-types>Return Types</h2>
+<p>To return a value from a function, the declaration looks like this:</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-solidity data-lang=solidity><span class=kt>string</span> <span class=n>greeting</span> <span class=o>=</span> <span class=s>&#34;What&#39;s up dog&#34;</span><span class=p>;</span>
+
+<span class=kd>function</span> <span class=nf>sayHello</span><span class=p>()</span> <span class=k>public</span> <span class=k>returns</span> <span class=p>(</span><span class=kt>string</span> <span class=k>memory</span><span class=p>)</span> <span class=p>{</span>
+  <span class=k>return</span> <span class=n>greeting</span><span class=p>;</span>
+<span class=p>}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>In Solidity, the function declaration contains the type of the return value (in this case <code>string</code>).</p>
+<h2 id=calling-other-functions>Calling Other Functions</h2>
+<p>We can call other functions by performing</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-solidity data-lang=solidity><span class=kd>function</span> <span class=nf>createRandomZombie</span><span class=p>(</span><span class=kt>string</span> <span class=k>memory</span> <span class=n>_name</span><span class=p>)</span> <span class=k>public</span> <span class=p>{</span>
+	<span class=kt>uint</span> <span class=n>randDna</span> <span class=o>=</span> <span class=n>_generateRandomDna</span><span class=p>(</span><span class=n>_name</span><span class=p>);</span>
+	<span class=n>_createZombie</span><span class=p>(</span><span class=n>_name</span><span class=p>,</span> <span class=n>randDna</span><span class=p>);</span>
+<span class=p>}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>We can deal with multiple return types as seen below</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-solidity data-lang=solidity><span class=kd>function</span> <span class=nf>multipleReturns</span><span class=p>()</span> <span class=k>internal</span> <span class=k>returns</span><span class=p>(</span><span class=kt>uint</span> <span class=n>a</span><span class=p>,</span> <span class=kt>uint</span> <span class=n>b</span><span class=p>,</span> <span class=kt>uint</span> <span class=n>c</span><span class=p>)</span> <span class=p>{</span>
+  <span class=k>return</span> <span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=mi>2</span><span class=p>,</span> <span class=mi>3</span><span class=p>);</span>
+<span class=p>}</span>
+
+<span class=kd>function</span> <span class=nf>processMultipleReturns</span><span class=p>()</span> <span class=k>external</span> <span class=p>{</span>
+  <span class=kt>uint</span> <span class=n>a</span><span class=p>;</span>
+  <span class=kt>uint</span> <span class=n>b</span><span class=p>;</span>
+  <span class=kt>uint</span> <span class=n>c</span><span class=p>;</span>
+  <span class=c1>// This is how you do multiple assignment:
+</span><span class=c1></span>  <span class=p>(</span><span class=n>a</span><span class=p>,</span> <span class=n>b</span><span class=p>,</span> <span class=n>c</span><span class=p>)</span> <span class=o>=</span> <span class=n>multipleReturns</span><span class=p>();</span>
+<span class=p>}</span>
+
+<span class=c1>// Or if we only cared about one of the values:
+</span><span class=c1></span><span class=kd>function</span> <span class=nf>getLastReturnValue</span><span class=p>()</span> <span class=k>external</span> <span class=p>{</span>
+  <span class=kt>uint</span> <span class=n>c</span><span class=p>;</span>
+  <span class=c1>// We can just leave the other fields blank:
+</span><span class=c1></span>  <span class=p>(,,</span><span class=n>c</span><span class=p>)</span> <span class=o>=</span> <span class=n>multipleReturns</span><span class=p>();</span>
+<span class=p>}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id=function-invariants>Function Invariants</h2>
+<p>We can also specify function invariants which must be adhered to by using the <code>require</code> keyword. This allows us to ensure that specific invariants are followed before any changes are applied to the mutated state of our smart contract.</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-solidity data-lang=solidity><span class=kd>function</span> <span class=nf>createRandomZombie</span><span class=p>(</span><span class=kt>string</span> <span class=k>memory</span> <span class=n>_name</span><span class=p>)</span> <span class=k>public</span> <span class=p>{</span>
+	<span class=nb>require</span><span class=p>(</span><span class=n>ownerZombieCount</span><span class=p>[</span><span class=nb>msg</span><span class=p>.</span><span class=nb>sender</span><span class=p>]</span> <span class=o>==</span> <span class=mi>0</span><span class=p>);</span>
+	<span class=kt>uint</span> <span class=n>randDna</span> <span class=o>=</span> <span class=n>_generateRandomDna</span><span class=p>(</span><span class=n>_name</span><span class=p>);</span>
+	<span class=n>_createZombie</span><span class=p>(</span><span class=n>_name</span><span class=p>,</span> <span class=n>randDna</span><span class=p>);</span>
+<span class=p>}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id=events>Events</h2>
+<p><strong><em>Events</em></strong> are a way for your contract to communicate that something happened on the blockchain to your app front-end, which can be &lsquo;listening&rsquo; for certain events and take action when they happen.</p>
+<p>We can first define events by doing</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-solidity data-lang=solidity><span class=kd>event</span> <span class=nc>NewZombie</span><span class=p>(</span><span class=kt>uint</span> <span class=n>zombieId</span><span class=p>,</span> <span class=kt>string</span> <span class=nb>name</span><span class=p>,</span> <span class=kt>uint</span> <span class=n>dna</span><span class=p>);</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>and then emit and event on the blockchain by performing the function call of</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-solidity data-lang=solidity><span class=n>emit</span> <span class=n>NewZombie</span><span class=p>(</span><span class=n>id</span><span class=p>,</span> <span class=n>_name</span><span class=p>,</span> <span class=n>_dna</span><span class=p>);</span>
+</code></pre></td></tr></table>
+</div>
+</div><h1 id=inheritance>Inheritance</h1>
+<p>Solidity supports inheritance and this allows us to perform inheritance when we have multiple contracts.</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-solidity data-lang=solidity><span class=kd>contract</span> <span class=nc>ZombieFeeding</span> <span class=k>is</span> <span class=n>ZombieFactory</span> <span class=p>{</span>
+	<span class=c1>//Contract Goes Here
+</span><span class=c1></span><span class=p>}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id=interfaces>Interfaces</h2>
+<p>We can also specify interfaces such that the compiler knows how to call specific functions which might not be defined in it&rsquo;s source code as seen below</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-solidity data-lang=solidity><span class=kd>contract</span> <span class=nc>KittyInterface</span> <span class=p>{</span>
+  <span class=kd>function</span> <span class=nf>getKitty</span><span class=p>(</span><span class=kt>uint256</span> <span class=n>_id</span><span class=p>)</span> <span class=k>external</span> <span class=k>view</span> <span class=k>returns</span> <span class=p>(</span>
+    <span class=kt>bool</span> <span class=n>isGestating</span><span class=p>,</span>
+    <span class=kt>bool</span> <span class=n>isReady</span><span class=p>,</span>
+    <span class=kt>uint256</span> <span class=n>cooldownIndex</span><span class=p>,</span>
+    <span class=kt>uint256</span> <span class=n>nextActionAt</span><span class=p>,</span>
+    <span class=kt>uint256</span> <span class=n>siringWithId</span><span class=p>,</span>
+    <span class=kt>uint256</span> <span class=n>birthTime</span><span class=p>,</span>
+    <span class=kt>uint256</span> <span class=n>matronId</span><span class=p>,</span>
+    <span class=kt>uint256</span> <span class=n>sireId</span><span class=p>,</span>
+    <span class=kt>uint256</span> <span class=n>generation</span><span class=p>,</span>
+    <span class=kt>uint256</span> <span class=n>genes</span>
+  <span class=p>);</span>
+<span class=p>}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>This is useful when we want to reference contracts which are deployed on the blockchain but not in our source code as seen below</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-solidity data-lang=solidity><span class=kd>contract</span> <span class=nc>ZombieFeeding</span> <span class=k>is</span> <span class=n>ZombieFactory</span> <span class=p>{</span>
+
+  <span class=kt>address</span> <span class=n>ckAddress</span> <span class=o>=</span> <span class=mh>0x06012c8cf97BEaD5deAe237070F9587f8E7A266d</span><span class=p>;</span>
+  <span class=n>KittyInterface</span> <span class=n>kittyContract</span> <span class=o>=</span> <span class=n>KittyInterface</span><span class=p>(</span><span class=n>ckAddress</span><span class=p>);</span>
+	
+  <span class=c1>// Other Stuff
+</span><span class=c1></span>
+<span class=p>}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+</article>
+<hr>
+<div class=page-end>
+<div class=backlinks-container>
+<h3>Backlinks</h3>
+<ul class=backlinks>
+<li>
+<a href=/quartz/notes/smart-contracts>Smart Contracts</a>
+</li>
+<li>
+<a href=/quartz/notes/web3>Web3</a>
+</li>
+</ul>
+</div>
+<div>
+<script src=https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI=" crossorigin=anonymous></script>
+<h3>Interactive Graph</h3>
+<div id=graph-container></div>
+<style>:root{--g-node:var(--secondary);--g-node-active:var(--primary);--g-node-inactive:var(--visited);--g-link:var(--outlinegray);--g-link-active:#5a7282}</style>
+<script src=https://ivanleomk.github.io/quartz/js/graph.27e8521c25c27c79dea35f434c486167.js></script>
+<script>drawGraph("https://ivanleomk.github.io/quartz/notes/solidity","https://ivanleomk.github.io/quartz",[{"/moc":"#4388cc"}],-1,!0,!1,!0)</script>
+</div>
+</div>
+<div id=contact_buttons>
+<footer>
+<p>Made by Ivan Leo using <a href=https://github.com/jackyzha0/quartz>Quartz</a>, © 2022</p>
+<ul>
+<li><a href=/>Home</a></li>
+<li><a href=https://twitter.com/ivanleomk>Twitter</a></li><li><a href=https://github.com/ivanleomk>Github</a></li></ul>
+</footer>
+</div>
+<script src=https://ivanleomk.github.io/quartz/js/popover.9d69dffc0f2d029ef30cf63230ccce4c.min.js></script>
+<script>initPopover("https://ivanleomk.github.io/quartz")</script>
+</div>
+</body>
+</html>
