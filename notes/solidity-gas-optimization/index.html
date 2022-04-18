@@ -12,7 +12,7 @@
 <script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js integrity=sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx crossorigin=anonymous></script>
 <script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous></script>
 <script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:!0},{left:'$',right:'$',display:!1}],throwOnError:!1})})</script>
-<script>const BASE_URL="https://ivanleomk.github.io/quartz",fetchData=Promise.all([fetch("https://ivanleomk.github.io/quartz/indices/linkIndex.a739ddadb9c42cd0df3dde18b9440507.min.json").then(a=>a.json()).then(a=>({index:a.index,links:a.links})),fetch("https://ivanleomk.github.io/quartz/indices/contentIndex.b1e39ec68f3c0076d82e15e3598a82b7.min.json").then(a=>a.json())]).then(([{index:a,links:b},c])=>({index:a,links:b,content:c}))</script>
+<script>const BASE_URL="https://ivanleomk.github.io/quartz",fetchData=Promise.all([fetch("https://ivanleomk.github.io/quartz/indices/linkIndex.7062c1bf5a7fef6418e9c60976e2d78a.min.json").then(a=>a.json()).then(a=>({index:a.index,links:a.links})),fetch("https://ivanleomk.github.io/quartz/indices/contentIndex.e3949cf82a3b11b56a478271a8e7425e.min.json").then(a=>a.json())]).then(([{index:a,links:b},c])=>({index:a,links:b,content:c}))</script>
 </head>
 <body>
 <div id=search-container>
@@ -45,10 +45,72 @@ Last updated Unknown
 </ul>
 <aside class=mainTOC>
 <h3>Table of Contents</h3>
-<nav id=TableOfContents></nav>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#using-structs>Using Structs</a></li>
+<li><a href=#using-view-functions>Using View Functions</a></li>
+</ol>
+</nav>
 </aside>
 <h1 id=introduction>Introduction</h1>
 <p>We want to minimise the cost of gas to our users because that&rsquo;ll result in a large amount of unneccessary expenses for them otherwise.</p>
+<h2 id=using-structs>Using Structs</h2>
+<p>If you have multiple <code>uint</code>s inside a struct, using a smaller-sized <code>uint</code> when possible will allow Solidity to pack these variables together to take up less storage. For example:</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-solidity data-lang=solidity><span class=kd>struct</span> <span class=nc>NormalStruct</span> <span class=p>{</span>
+  <span class=kt>uint</span> <span class=n>a</span><span class=p>;</span>
+  <span class=kt>uint</span> <span class=n>b</span><span class=p>;</span>
+  <span class=kt>uint</span> <span class=n>c</span><span class=p>;</span>
+<span class=p>}</span>
+
+<span class=kd>struct</span> <span class=nc>MiniMe</span> <span class=p>{</span>
+  <span class=kt>uint32</span> <span class=n>a</span><span class=p>;</span>
+  <span class=kt>uint32</span> <span class=n>b</span><span class=p>;</span>
+  <span class=kt>uint</span> <span class=n>c</span><span class=p>;</span>
+<span class=p>}</span>
+
+<span class=c1>// `mini` will cost less gas than `normal` because of struct packing
+</span><span class=c1></span><span class=n>NormalStruct</span> <span class=n>normal</span> <span class=o>=</span> <span class=n>NormalStruct</span><span class=p>(</span><span class=mi>10</span><span class=p>,</span> <span class=mi>20</span><span class=p>,</span> <span class=mi>30</span><span class=p>);</span>
+<span class=n>MiniMe</span> <span class=n>mini</span> <span class=o>=</span> <span class=n>MiniMe</span><span class=p>(</span><span class=mi>10</span><span class=p>,</span> <span class=mi>20</span><span class=p>,</span> <span class=mi>30</span><span class=p>);</span> 
+</code></pre></td></tr></table>
+</div>
+</div><h2 id=using-view-functions>Using View Functions</h2>
+<p>View functions do not need any gas because they do not modify the state of the data. As such, they only require the local etherium node to query the blockchain data. They will however cost gas when they are called inside other functions.</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-solidity data-lang=solidity><span class=kd>function</span> <span class=nf>getZombiesByOwner</span><span class=p>(</span><span class=kt>address</span> <span class=n>_owner</span><span class=p>)</span> <span class=k>external</span> <span class=k>view</span> <span class=k>returns</span><span class=p>(</span><span class=kt>uint</span><span class=p>[]</span> <span class=k>memory</span><span class=p>)</span> <span class=p>{</span>
+    <span class=kt>uint</span><span class=p>[]</span> <span class=k>memory</span> <span class=n>result</span> <span class=o>=</span> <span class=k>new</span> <span class=kt>uint</span><span class=p>[](</span><span class=n>ownerZombieCount</span><span class=p>[</span><span class=n>_owner</span><span class=p>]);</span>
+    <span class=c1>// Start here
+</span><span class=c1></span>    <span class=k>return</span> <span class=n>result</span><span class=p>;</span>
+  <span class=p>}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
 </article>
 <hr>
 <div class=page-end>

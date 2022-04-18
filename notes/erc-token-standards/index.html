@@ -1,8 +1,8 @@
 <!doctype html><html lang=en>
 <head>
 <meta charset=utf-8>
-<meta name=description content>
-<title>Tags</title>
+<meta name=description content="ERC-721 1 2 3 4 5 6 7 8 9  contract ERC721 { event Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId); event Approval(address indexed _owner, address indexed _approved, uint256 indexed _tokenId); function balanceOf(address _owner) external view returns (uint256); function ownerOf(uint256 _tokenId) external view returns (address); function transferFrom(address _from, address _to, uint256 _tokenId) external payable; function approve(address _approved, uint256 _tokenId) external payable; }   ">
+<title>ERC Token Standards</title>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <link rel="shortcut icon" type=image/png href=/icon.png>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Sans+Pro:wght@400;600;700&family=Fira+Code:wght@400;700&display=swap" rel=stylesheet>
@@ -37,10 +37,66 @@
 </div>
 </header>
 <article>
-<h1>All Tags</h1>
-<div class=tags>
+<h1>ERC Token Standards</h1>
+<p class=meta>
+Last updated Unknown
+</p>
+<ul class=tags>
+</ul>
+<aside class=mainTOC>
+<h3>Table of Contents</h3>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#erc-721>ERC-721</a></li>
+</ol>
+</nav>
+</aside>
+<h2 id=erc-721>ERC-721</h2>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-solidity data-lang=solidity><span class=kd>contract</span> <span class=nc>ERC721</span> <span class=p>{</span>
+  <span class=kd>event</span> <span class=nc>Transfer</span><span class=p>(</span><span class=kt>address</span> <span class=k>indexed</span> <span class=n>_from</span><span class=p>,</span> <span class=kt>address</span> <span class=k>indexed</span> <span class=n>_to</span><span class=p>,</span> <span class=kt>uint256</span> <span class=k>indexed</span> <span class=n>_tokenId</span><span class=p>);</span>
+  <span class=kd>event</span> <span class=nc>Approval</span><span class=p>(</span><span class=kt>address</span> <span class=k>indexed</span> <span class=n>_owner</span><span class=p>,</span> <span class=kt>address</span> <span class=k>indexed</span> <span class=n>_approved</span><span class=p>,</span> <span class=kt>uint256</span> <span class=k>indexed</span> <span class=n>_tokenId</span><span class=p>);</span>
+
+  <span class=kd>function</span> <span class=nf>balanceOf</span><span class=p>(</span><span class=kt>address</span> <span class=n>_owner</span><span class=p>)</span> <span class=k>external</span> <span class=k>view</span> <span class=k>returns</span> <span class=p>(</span><span class=kt>uint256</span><span class=p>);</span>
+  <span class=kd>function</span> <span class=nf>ownerOf</span><span class=p>(</span><span class=kt>uint256</span> <span class=n>_tokenId</span><span class=p>)</span> <span class=k>external</span> <span class=k>view</span> <span class=k>returns</span> <span class=p>(</span><span class=kt>address</span><span class=p>);</span>
+  <span class=kd>function</span> <span class=nf>transferFrom</span><span class=p>(</span><span class=kt>address</span> <span class=n>_from</span><span class=p>,</span> <span class=kt>address</span> <span class=n>_to</span><span class=p>,</span> <span class=kt>uint256</span> <span class=n>_tokenId</span><span class=p>)</span> <span class=k>external</span> <span class=k>payable</span><span class=p>;</span>
+  <span class=kd>function</span> <span class=nf>approve</span><span class=p>(</span><span class=kt>address</span> <span class=n>_approved</span><span class=p>,</span> <span class=kt>uint256</span> <span class=n>_tokenId</span><span class=p>)</span> <span class=k>external</span> <span class=k>payable</span><span class=p>;</span>
+<span class=p>}</span>
+</code></pre></td></tr></table>
+</div>
 </div>
 </article>
+<hr>
+<div class=page-end>
+<div class=backlinks-container>
+<h3>Backlinks</h3>
+<ul class=backlinks>
+<li>
+<a href=/quartz/notes/web3>Web3</a>
+</li>
+</ul>
+</div>
+<div>
+<script src=https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI=" crossorigin=anonymous></script>
+<h3>Interactive Graph</h3>
+<div id=graph-container></div>
+<style>:root{--g-node:var(--secondary);--g-node-active:var(--primary);--g-node-inactive:var(--visited);--g-link:var(--outlinegray);--g-link-active:#5a7282}</style>
+<script src=https://ivanleomk.github.io/quartz/js/graph.27e8521c25c27c79dea35f434c486167.js></script>
+<script>drawGraph("https://ivanleomk.github.io/quartz/notes/erc-token-standards","https://ivanleomk.github.io/quartz",[{"/moc":"#4388cc"}],-1,!0,!1,!0)</script>
+</div>
+</div>
 <div id=contact_buttons>
 <footer>
 <p>Made by Ivan Leo using <a href=https://github.com/jackyzha0/quartz>Quartz</a>, © 2022</p>
@@ -49,8 +105,8 @@
 <li><a href=https://twitter.com/ivanleomk>Twitter</a></li><li><a href=https://github.com/ivanleomk>Github</a></li></ul>
 </footer>
 </div>
-</div>
 <script src=https://ivanleomk.github.io/quartz/js/popover.9d69dffc0f2d029ef30cf63230ccce4c.min.js></script>
 <script>initPopover("https://ivanleomk.github.io/quartz")</script>
+</div>
 </body>
 </html>

@@ -13,7 +13,7 @@
 <script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js integrity=sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx crossorigin=anonymous></script>
 <script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous></script>
 <script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:!0},{left:'$',right:'$',display:!1}],throwOnError:!1})})</script>
-<script>const BASE_URL="https://ivanleomk.github.io/quartz",fetchData=Promise.all([fetch("https://ivanleomk.github.io/quartz/indices/linkIndex.a739ddadb9c42cd0df3dde18b9440507.min.json").then(a=>a.json()).then(a=>({index:a.index,links:a.links})),fetch("https://ivanleomk.github.io/quartz/indices/contentIndex.b1e39ec68f3c0076d82e15e3598a82b7.min.json").then(a=>a.json())]).then(([{index:a,links:b},c])=>({index:a,links:b,content:c}))</script>
+<script>const BASE_URL="https://ivanleomk.github.io/quartz",fetchData=Promise.all([fetch("https://ivanleomk.github.io/quartz/indices/linkIndex.7062c1bf5a7fef6418e9c60976e2d78a.min.json").then(a=>a.json()).then(a=>({index:a.index,links:a.links})),fetch("https://ivanleomk.github.io/quartz/indices/contentIndex.e3949cf82a3b11b56a478271a8e7425e.min.json").then(a=>a.json())]).then(([{index:a,links:b},c])=>({index:a,links:b,content:c}))</script>
 </head>
 <body>
 <div id=search-container>
@@ -59,9 +59,19 @@ Last updated Unknown
 <li><a href=#calling-other-functions>Calling Other Functions</a></li>
 <li><a href=#function-invariants>Function Invariants</a></li>
 <li><a href=#events>Events</a></li>
+<li><a href=#modifiers>Modifiers</a>
+<ol>
+<li><a href=#visibility-modifiers>Visibility Modifiers</a></li>
+<li><a href=#state-modifiers>State Modifiers</a></li>
+<li><a href=#custom>Custom</a></li>
+</ol>
+</li>
 </ol>
 <ol>
 <li><a href=#interfaces>Interfaces</a></li>
+</ol>
+<ol>
+<li><a href=#solidity-timeoptions>Solidity Timeoptions</a></li>
 </ol>
 </nav>
 </aside>
@@ -291,6 +301,56 @@ Last updated Unknown
 <pre tabindex=0 class=chroma><code class=language-solidity data-lang=solidity><span class=n>emit</span> <span class=n>NewZombie</span><span class=p>(</span><span class=n>id</span><span class=p>,</span> <span class=n>_name</span><span class=p>,</span> <span class=n>_dna</span><span class=p>);</span>
 </code></pre></td></tr></table>
 </div>
+</div><h2 id=modifiers>Modifiers</h2>
+<h3 id=visibility-modifiers>Visibility Modifiers</h3>
+<ul>
+<li><code>Private</code> : Callable only from other functions inside this contract</li>
+<li><code>Internal</code> : Callable only from other functions inside this contract but able to be inherited</li>
+<li><code>External</code> : Can only be called outside the contract</li>
+<li><code>Public</code> : Can be called anywhere, both internally and externally</li>
+</ul>
+<h3 id=state-modifiers>State Modifiers</h3>
+<ul>
+<li><code>View</code> : No data will be saved/changed by running the function</li>
+<li><code>Pure</code> : Function doesn&rsquo;t read any data from the blockchain nor save any data to the blockchain</li>
+</ul>
+<h3 id=custom>Custom</h3>
+<ul>
+<li><code>onlyOwner</code> :</li>
+<li>other assorted modifiers we can define</li>
+</ul>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-solidity data-lang=solidity><span class=c1>// A mapping to store a user&#39;s age:
+</span><span class=c1></span><span class=kd>mapping</span> <span class=p>(</span><span class=kt>uint</span> <span class=o>=&gt;</span> <span class=kt>uint</span><span class=p>)</span> <span class=k>public</span> <span class=n>age</span><span class=p>;</span>
+
+<span class=c1>// Require that this user be older than a certain age:
+</span><span class=c1></span><span class=kd>modifier</span> <span class=nf>olderThan</span><span class=p>(</span><span class=kt>uint</span> <span class=n>_age</span><span class=p>,</span> <span class=kt>uint</span> <span class=n>_userId</span><span class=p>)</span> <span class=p>{</span>
+  <span class=nb>require</span> <span class=p>(</span><span class=n>age</span><span class=p>[</span><span class=n>_userId</span><span class=p>]</span> <span class=o>&gt;=</span> <span class=n>_age</span><span class=p>);</span>
+  <span class=k>_</span><span class=p>;</span>
+<span class=p>}</span>
+
+<span class=c1>// Must be older than 16 to drive a car (in the US, at least)
+</span><span class=c1></span><span class=kd>function</span> <span class=nf>driveCar</span><span class=p>(</span><span class=kt>uint</span> <span class=n>_userId</span><span class=p>)</span> <span class=k>public</span> <span class=n>olderThan</span><span class=p>(</span><span class=mi>16</span><span class=p>,</span> <span class=n>_userId</span><span class=p>)</span> <span class=p>{</span>
+  <span class=c1>// Some function logic
+</span><span class=c1></span><span class=p>}</span>
+</code></pre></td></tr></table>
+</div>
 </div><h1 id=inheritance>Inheritance</h1>
 <p>Solidity supports inheritance and this allows us to perform inheritance when we have multiple contracts.</p>
 <div class=highlight><div class=chroma>
@@ -361,6 +421,63 @@ Last updated Unknown
 	
   <span class=c1>// Other Stuff
 </span><span class=c1></span>
+<span class=p>}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h1 id=time>Time</h1>
+<h2 id=solidity-timeoptions>Solidity Timeoptions</h2>
+<p>Solidity contains the time units <code>seconds</code>, <code>minutes</code>, <code>hours</code>, <code>days</code>, <code>weeks</code> and <code>years</code>. We can utilise this in order to help implement potential features such as timeouts.</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-solidity data-lang=solidity><span class=kt>uint</span> <span class=n>lastUpdated</span><span class=p>;</span>
+
+<span class=c1>// Set `lastUpdated` to `now`
+</span><span class=c1></span><span class=kd>function</span> <span class=nf>updateTimestamp</span><span class=p>()</span> <span class=k>public</span> <span class=p>{</span>
+  <span class=n>lastUpdated</span> <span class=o>=</span> <span class=nb>now</span><span class=p>;</span>
+<span class=p>}</span>
+
+<span class=c1>// Will return `true` if 5 minutes have passed since `updateTimestamp` was 
+</span><span class=c1>// called, `false` if 5 minutes have not passed
+</span><span class=c1></span><span class=kd>function</span> <span class=nf>fiveMinutesHavePassed</span><span class=p>()</span> <span class=k>public</span> <span class=k>view</span> <span class=k>returns</span> <span class=p>(</span><span class=kt>bool</span><span class=p>)</span> <span class=p>{</span>
+  <span class=k>return</span> <span class=p>(</span><span class=nb>now</span> <span class=o>&gt;=</span> <span class=p>(</span><span class=n>lastUpdated</span> <span class=o>+</span> <span class=mi>5</span> <span class=kc>minutes</span><span class=p>));</span>
+<span class=p>}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h1 id=payable>Payable</h1>
+<p>We can also specify and send ether with specific smart contract function calls using the <code>payable</code> modifier</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-solidity data-lang=solidity><span class=kd>contract</span> <span class=nc>OnlineStore</span> <span class=p>{</span>
+  <span class=kd>function</span> <span class=nf>buySomething</span><span class=p>()</span> <span class=k>external</span> <span class=k>payable</span> <span class=p>{</span>
+    <span class=c1>// Check to make sure 0.001 ether was sent to the function call:
+</span><span class=c1></span>    <span class=nb>require</span><span class=p>(</span><span class=nb>msg</span><span class=p>.</span><span class=nb>value</span> <span class=o>==</span> <span class=mi>0</span><span class=p>.</span><span class=mi>001</span> <span class=kc>ether</span><span class=p>);</span>
+    <span class=c1>// If so, some logic to transfer the digital item to the caller of the function:
+</span><span class=c1></span>    <span class=n>transferThing</span><span class=p>(</span><span class=nb>msg</span><span class=p>.</span><span class=nb>sender</span><span class=p>);</span>
+  <span class=p>}</span>
 <span class=p>}</span>
 </code></pre></td></tr></table>
 </div>
