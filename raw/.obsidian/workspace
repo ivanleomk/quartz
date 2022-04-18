@@ -7,8 +7,24 @@
         "id": "3fa5dbe10f3a96c3",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "notes/Web3.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "1b2887dc646537d1",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "notes/ERC Token Standards.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -65,6 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "notes/ERC Token Standards.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -74,24 +91,35 @@
                 "unlinkedCollapsed": true
               }
             }
+          },
+          {
+            "id": "cd2bb94aa9a1edb1",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "notes/ERC Token Standards.md"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
     "width": 300
   },
-  "active": "3fa5dbe10f3a96c3",
+  "active": "1b2887dc646537d1",
   "lastOpenFiles": [
-    "notes/Solidity Gas Optimization.md",
-    "notes/Smart Contracts.md",
+    "notes/ERC Token Standards.md",
     "notes/Web3.md",
     "notes/Solidity.md",
+    "notes/Solidity Gas Optimization.md",
+    "notes/Smart Contracts.md",
     "private/Governing as Gardening.md",
     "private/PublicFeedback.md",
     "notes/Fitness.md",
     "notes/Hormonal Health.md",
-    "notes/Cardio 101.md",
-    "notes/Dieting 101.md"
+    "notes/Cardio 101.md"
   ]
 }

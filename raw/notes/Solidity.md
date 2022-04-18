@@ -4,6 +4,7 @@ title: "Solidity"
 
 # Initialising A Program
 
+
 We initialise a program by defining the compiler version and then initialising contracts
 
 ```solidity
@@ -155,7 +156,37 @@ and then emit and event on the blockchain by performing the function call of
 emit NewZombie(id, _name, _dna);
 ```
 
- 
+## Modifiers
+### Visibility Modifiers
+
+- `Private` : Callable only from other functions inside this contract
+- `Internal` : Callable only from other functions inside this contract but able to be inherited
+- `External` : Can only be called outside the contract
+- `Public` : Can be called anywhere, both internally and externally
+
+### State Modifiers
+- `View` : No data will be saved/changed by running the function
+- `Pure` : Function doesn't read any data from the blockchain nor save any data to the blockchain
+
+### Custom
+- `onlyOwner` : 
+- other assorted modifiers we can define
+
+```solidity
+// A mapping to store a user's age:
+mapping (uint => uint) public age;
+
+// Require that this user be older than a certain age:
+modifier olderThan(uint _age, uint _userId) {
+  require (age[_userId] >= _age);
+  _;
+}
+
+// Must be older than 16 to drive a car (in the US, at least)
+function driveCar(uint _userId) public olderThan(16, _userId) {
+  // Some function logic
+}
+```
 
 # Inheritance
 Solidity supports inheritance and this allows us to perform inheritance when we have multiple contracts.
@@ -196,5 +227,40 @@ contract ZombieFeeding is ZombieFactory {
 	
   // Other Stuff
 
+}
+```
+
+# Time
+
+## Solidity Timeoptions
+
+Solidity contains the time units `seconds`, `minutes`, `hours`, `days`, `weeks` and `years`. We can utilise this in order to help implement potential features such as timeouts.
+
+```solidity
+uint lastUpdated;
+
+// Set `lastUpdated` to `now`
+function updateTimestamp() public {
+  lastUpdated = now;
+}
+
+// Will return `true` if 5 minutes have passed since `updateTimestamp` was 
+// called, `false` if 5 minutes have not passed
+function fiveMinutesHavePassed() public view returns (bool) {
+  return (now >= (lastUpdated + 5 minutes));
+}
+```
+
+# Payable
+We can also specify and send ether with specific smart contract function calls using the `payable` modifier
+
+```solidity
+contract OnlineStore {
+  function buySomething() external payable {
+    // Check to make sure 0.001 ether was sent to the function call:
+    require(msg.value == 0.001 ether);
+    // If so, some logic to transfer the digital item to the caller of the function:
+    transferThing(msg.sender);
+  }
 }
 ```
