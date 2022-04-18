@@ -5,13 +5,21 @@
   "triggerOnLoad": true,
   "isSyncing": false,
   "lastSyncFailed": false,
-  "lastSavedStatusID": 3311794,
+  "lastSavedStatusID": 3379515,
   "currentSyncStatusID": 0,
   "refreshBooks": false,
   "booksToRefresh": [],
   "booksIDsMap": {
     "Readwise/./Tweets/Tweets From Trung Phan 🇨🇦.md": "9913278",
-    "Readwise/./Books/Hidden Games.md": "14682176"
+    "Readwise/./Books/Hidden Games.md": "14682176",
+    "Readwise/./Podcasts/Gary Shilling What Is the Consensus View Getting Wrong.md": "14791256",
+    "Readwise/./Podcasts/Darius Dale End of Market Goldilocks Oil, the Dollar, and Bitcoin.md": "14791257",
+    "Readwise/./Podcasts/This Is the Vision for DeFi Built on Bitcoin.md": "14791258",
+    "Readwise/./Podcasts/#112 Adam Grant Rethinking Your Position.md": "14791259",
+    "Readwise/./Podcasts/76. Vocabulaire Et Traductions.md": "14791260",
+    "Readwise/./Podcasts/10. Les Mots Français Qui Viennent De l'Anglais.md": "14791261",
+    "Readwise/./Podcasts/12. 5 Ans Après Les Accords De Paris.md": "14791262",
+    "Readwise/./Podcasts/Effects of Fasting & Time Restricted Eating on Fat Loss & Health  Episode 41.md": "14791263"
   },
   "reimportShowConfirmation": true
 }

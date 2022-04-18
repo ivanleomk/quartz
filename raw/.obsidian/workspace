@@ -4,15 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "745d1f4d14a13c26",
+        "id": "3fa5dbe10f3a96c3",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "notes/Web3.md",
-            "mode": "source",
-            "source": false
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -69,8 +65,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/Web3.md",
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -86,17 +81,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "745d1f4d14a13c26",
+  "active": "3fa5dbe10f3a96c3",
   "lastOpenFiles": [
+    "notes/Solidity Gas Optimization.md",
+    "notes/Smart Contracts.md",
     "notes/Web3.md",
+    "notes/Solidity.md",
+    "private/Governing as Gardening.md",
+    "private/PublicFeedback.md",
     "notes/Fitness.md",
     "notes/Hormonal Health.md",
     "notes/Cardio 101.md",
-    "notes/Dieting 101.md",
-    "notes/Personal Stuff.md",
-    "_index.md",
-    "notes/What I'm Reading.md",
-    "private/Ancient Roman History in a Nutshell.md",
-    "Project Ideas.md"
+    "notes/Dieting 101.md"
   ]
 }

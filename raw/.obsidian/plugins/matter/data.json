@@ -5,7 +5,7 @@
   "dataDir": "./highlights",
   "syncInterval": 720,
   "hasCompletedInitialSetup": true,
-  "lastSync": "2022-04-16T16:26:10.523Z",
+  "lastSync": "2022-04-18T03:51:08.994Z",
   "isSyncing": false,
   "contentMap": {
     "Life is Short.md": "4_59985",
@@ -62,6 +62,7 @@
     "BowTiedBull FAQ - Will Be Updated Over Time.md": "4_251132",
     "DeFi- In Simple Photos and How to Make Your First Transaction!.md": "4_3498753",
     "Change Your Psychology and the Cartoon 10 Commandments.md": "4_1169280",
-    "Crypto vs. Global Money Supply and The 2001 Tech Bubble.md": "4_413706"
+    "Crypto vs. Global Money Supply and The 2001 Tech Bubble.md": "4_413706",
+    "A gentle introduction to Ethereum.md": "4_963282"
   }
 }
