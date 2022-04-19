@@ -10,13 +10,7 @@ title: "Web3"
 
 Blockchains start off with a Genesis State when they launch. Bitcoin's genesis state happened in 2009 when the public network launched. Ethereum's Genesis State happened in 2015, when it launched.
 
-Every transaction on a blockchain modifies the global state that is replicated across all nodes. Since there are millions of transactions, transactions get grouped together in blocks. Hence the name. These blocks are chained together in a cryptographically verifiable way so they are historically traceable.
-
-Each block stores a hash, the hash of the previous hash and some information. The original use of proof-of-work resulted in it being difficult to create new blocks. As a result, this meant that individuals could not easily modify the state of the blockchain.
-
-**tldr;**
-
-Miners create new blocks by using what is known as proof-of-work. This then allows them to propose new blocks to add to the entire network which will then cause the state of the blockchain to be updated across all nodes.
+The blockchain is then modified through [[Blockchain Mining]] by miners which help to process these transactions in exchange for the native token of Etherium `Eth`.
 
 ## Resources
 
@@ -44,7 +38,9 @@ Web3, the future internet we’re moving towards, is a decentralized internet. U
 # Eth
 > Ethereum is a decentralized blockchain that supports smart contracts. Unlike Bitcoin, which only supports the transfer of the Bitcoin token around the network, Ethereum is more general purpose.
 
-We can program [[Smart Contracts]] on Ethereum using [[Solidity]] which is its native programming language. The network itself is mantained across a variety of different computer nodes which come together to form the Ethereum Virtual Machine.
+We can program [[Smart Contracts]] on Ethereum using [[Solidity]] which is its native programming language. The network itself is mantained across a variety of different computer nodes which come together to form the [[Ethereum Virtual Machine]]. 
+
+Etherium uses [[Gas]] in order to power the individual smart contracts.
 
 
 # Crypto Wallets

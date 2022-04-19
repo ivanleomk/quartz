@@ -4,7 +4,7 @@ title: "ERC Token Standards"
 
 ## ERC-721
 
-
+ERC-721 specifies a series of standards which allow for a NFT Collection to be minted.
 
 ```solidity
 contract ERC721 {
