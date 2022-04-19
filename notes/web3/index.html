@@ -13,7 +13,7 @@
 <script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js integrity=sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx crossorigin=anonymous></script>
 <script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous></script>
 <script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:!0},{left:'$',right:'$',display:!1}],throwOnError:!1})})</script>
-<script>const BASE_URL="https://ivanleomk.github.io/quartz",fetchData=Promise.all([fetch("https://ivanleomk.github.io/quartz/indices/linkIndex.7062c1bf5a7fef6418e9c60976e2d78a.min.json").then(a=>a.json()).then(a=>({index:a.index,links:a.links})),fetch("https://ivanleomk.github.io/quartz/indices/contentIndex.0883e94941687b40fc11f3d8985f6f4d.min.json").then(a=>a.json())]).then(([{index:a,links:b},c])=>({index:a,links:b,content:c}))</script>
+<script>const BASE_URL="https://ivanleomk.github.io/quartz",fetchData=Promise.all([fetch("https://ivanleomk.github.io/quartz/indices/linkIndex.ba864df7f1492d6413cb651618c4c24c.min.json").then(a=>a.json()).then(a=>({index:a.index,links:a.links})),fetch("https://ivanleomk.github.io/quartz/indices/contentIndex.21e788eaa4d8af0c89e7031c641e5a3e.min.json").then(a=>a.json())]).then(([{index:a,links:b},c])=>({index:a,links:b,content:c}))</script>
 </head>
 <body>
 <div id=search-container>
@@ -66,10 +66,9 @@ Last updated Unknown
 <p>A blockchain is a shared, distributed, and permanent database shared among multiple nodes on a computer network. They record data in a way that makes it probabilistically impossible to modify or hack the system.</p>
 </blockquote>
 <p>Blockchains start off with a Genesis State when they launch. Bitcoin&rsquo;s genesis state happened in 2009 when the public network launched. Ethereum&rsquo;s Genesis State happened in 2015, when it launched.</p>
-<p>Every transaction on a blockchain modifies the global state that is replicated across all nodes. Since there are millions of transactions, transactions get grouped together in blocks. Hence the name. These blocks are chained together in a cryptographically verifiable way so they are historically traceable.</p>
-<p>Each block stores a hash, the hash of the previous hash and some information. The original use of proof-of-work resulted in it being difficult to create new blocks. As a result, this meant that individuals could not easily modify the state of the blockchain.</p>
-<p><strong>tldr;</strong></p>
-<p>Miners create new blocks by using what is known as proof-of-work. This then allows them to propose new blocks to add to the entire network which will then cause the state of the blockchain to be updated across all nodes.</p>
+<p>The blockchain is then modified through
+<a href=/quartz/notes/blockchain-mining rel=noopener class=internal-link data-src=/quartz/notes/blockchain-mining>Blockchain Mining
+</a> by miners which help to process these transactions in exchange for the native token of Etherium <code>Eth</code>.</p>
 <h2 id=resources>Resources</h2>
 <ul>
 <li>
@@ -97,7 +96,12 @@ Web3 : Read-Write-Own</p>
 <a href=/quartz/notes/smart-contracts rel=noopener class=internal-link data-src=/quartz/notes/smart-contracts>Smart Contracts
 </a> on Ethereum using
 <a href=/quartz/notes/solidity rel=noopener class=internal-link data-src=/quartz/notes/solidity>Solidity
-</a> which is its native programming language. The network itself is mantained across a variety of different computer nodes which come together to form the Ethereum Virtual Machine.</p>
+</a> which is its native programming language. The network itself is mantained across a variety of different computer nodes which come together to form the
+<a href=/quartz/notes/ethereum-virtual-machine rel=noopener class=internal-link data-src=/quartz/notes/ethereum-virtual-machine>Ethereum Virtual Machine
+</a>.</p>
+<p>Etherium uses
+<a href=/quartz/notes/gas rel=noopener class=internal-link data-src=/quartz/notes/gas>Gas
+</a> in order to power the individual smart contracts.</p>
 <h1 id=crypto-wallets>Crypto Wallets</h1>
 <p><strong>Definitions</strong></p>
 <ul>

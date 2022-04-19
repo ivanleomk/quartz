@@ -1,7 +1,8 @@
 <!doctype html><html lang=en>
 <head>
 <meta charset=utf-8>
-<meta name=description content="ERC-721 1 2 3 4 5 6 7 8 9  contract ERC721 { event Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId); event Approval(address indexed _owner, address indexed _approved, uint256 indexed _tokenId); function balanceOf(address _owner) external view returns (uint256); function ownerOf(uint256 _tokenId) external view returns (address); function transferFrom(address _from, address _to, uint256 _tokenId) external payable; function approve(address _approved, uint256 _tokenId) external payable; }   ">
+<meta name=description content="ERC-721 ERC-721 specifies a series of standards which allow for a NFT Collection to be minted.
+1 2 3 4 5 6 7 8 9  contract ERC721 { event Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId); event Approval(address indexed _owner, address indexed _approved, uint256 indexed _tokenId); function balanceOf(address _owner) external view returns (uint256); function ownerOf(uint256 _tokenId) external view returns (address); function transferFrom(address _from, address _to, uint256 _tokenId) external payable; function approve(address _approved, uint256 _tokenId) external payable; }   ">
 <title>ERC Token Standards</title>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <link rel="shortcut icon" type=image/png href=/icon.png>
@@ -12,7 +13,7 @@
 <script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js integrity=sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx crossorigin=anonymous></script>
 <script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous></script>
 <script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:!0},{left:'$',right:'$',display:!1}],throwOnError:!1})})</script>
-<script>const BASE_URL="https://ivanleomk.github.io/quartz",fetchData=Promise.all([fetch("https://ivanleomk.github.io/quartz/indices/linkIndex.7062c1bf5a7fef6418e9c60976e2d78a.min.json").then(a=>a.json()).then(a=>({index:a.index,links:a.links})),fetch("https://ivanleomk.github.io/quartz/indices/contentIndex.0883e94941687b40fc11f3d8985f6f4d.min.json").then(a=>a.json())]).then(([{index:a,links:b},c])=>({index:a,links:b,content:c}))</script>
+<script>const BASE_URL="https://ivanleomk.github.io/quartz",fetchData=Promise.all([fetch("https://ivanleomk.github.io/quartz/indices/linkIndex.ba864df7f1492d6413cb651618c4c24c.min.json").then(a=>a.json()).then(a=>({index:a.index,links:a.links})),fetch("https://ivanleomk.github.io/quartz/indices/contentIndex.21e788eaa4d8af0c89e7031c641e5a3e.min.json").then(a=>a.json())]).then(([{index:a,links:b},c])=>({index:a,links:b,content:c}))</script>
 </head>
 <body>
 <div id=search-container>
@@ -52,6 +53,7 @@ Last updated Unknown
 </nav>
 </aside>
 <h2 id=erc-721>ERC-721</h2>
+<p>ERC-721 specifies a series of standards which allow for a NFT Collection to be minted.</p>
 <div class=highlight><div class=chroma>
 <table class=lntable><tr><td class=lntd>
 <pre tabindex=0 class=chroma><code><span class=lnt>1
