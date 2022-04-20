@@ -1,8 +1,9 @@
 <!doctype html><html lang=en>
 <head>
 <meta charset=utf-8>
-<meta name=description content="Introduction We want to minimise the cost of gas to our users because that&rsquo;ll result in a large amount of unneccessary expenses for them otherwise.">
-<title>Solidity Gas Optimization</title>
+<meta name=description content="French  My Goal : Improve Speaking Ability
+ Speaking Exercises  Speak freely about any subject Tell a story about my life and record it Read a article and every 2 paragraphs, summarize what it is about Watch a video and discuss what it was about  Accent Listen to someone who has the exact accent that I want to mimic (Eg.">
+<title>Protocol List</title>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <link rel="shortcut icon" type=image/png href=/icon.png>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Sans+Pro:wght@400;600;700&family=Fira+Code:wght@400;700&display=swap" rel=stylesheet>
@@ -37,7 +38,7 @@
 </div>
 </header>
 <article>
-<h1>Solidity Gas Optimization</h1>
+<h1>Protocol List</h1>
 <p class=meta>
 Last updated Unknown
 </p>
@@ -47,70 +48,24 @@ Last updated Unknown
 <h3>Table of Contents</h3>
 <nav id=TableOfContents>
 <ol>
-<li><a href=#using-structs>Using Structs</a></li>
-<li><a href=#using-view-functions>Using View Functions</a></li>
+<li><a href=#speaking-exercises>Speaking Exercises</a></li>
 </ol>
 </nav>
 </aside>
-<h1 id=introduction>Introduction</h1>
-<p>We want to minimise the cost of gas to our users because that&rsquo;ll result in a large amount of unneccessary expenses for them otherwise.</p>
-<h2 id=using-structs>Using Structs</h2>
-<p>If you have multiple <code>uint</code>s inside a struct, using a smaller-sized <code>uint</code> when possible will allow Solidity to pack these variables together to take up less storage. For example:</p>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-solidity data-lang=solidity><span class=kd>struct</span> <span class=nc>NormalStruct</span> <span class=p>{</span>
-  <span class=kt>uint</span> <span class=n>a</span><span class=p>;</span>
-  <span class=kt>uint</span> <span class=n>b</span><span class=p>;</span>
-  <span class=kt>uint</span> <span class=n>c</span><span class=p>;</span>
-<span class=p>}</span>
-
-<span class=kd>struct</span> <span class=nc>MiniMe</span> <span class=p>{</span>
-  <span class=kt>uint32</span> <span class=n>a</span><span class=p>;</span>
-  <span class=kt>uint32</span> <span class=n>b</span><span class=p>;</span>
-  <span class=kt>uint</span> <span class=n>c</span><span class=p>;</span>
-<span class=p>}</span>
-
-<span class=c1>// `mini` will cost less gas than `normal` because of struct packing
-</span><span class=c1></span><span class=n>NormalStruct</span> <span class=n>normal</span> <span class=o>=</span> <span class=n>NormalStruct</span><span class=p>(</span><span class=mi>10</span><span class=p>,</span> <span class=mi>20</span><span class=p>,</span> <span class=mi>30</span><span class=p>);</span>
-<span class=n>MiniMe</span> <span class=n>mini</span> <span class=o>=</span> <span class=n>MiniMe</span><span class=p>(</span><span class=mi>10</span><span class=p>,</span> <span class=mi>20</span><span class=p>,</span> <span class=mi>30</span><span class=p>);</span> 
-</code></pre></td></tr></table>
-</div>
-</div><h2 id=using-view-functions>Using View Functions</h2>
-<p>View functions do not need any gas because they do not modify the state of the data. As such, they only require the local etherium node to query the blockchain data. They will however cost gas when they are called inside other functions.</p>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt>1
-</span><span class=lnt>2
-</span><span class=lnt>3
-</span><span class=lnt>4
-</span><span class=lnt>5
-</span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-solidity data-lang=solidity><span class=kd>function</span> <span class=nf>getZombiesByOwner</span><span class=p>(</span><span class=kt>address</span> <span class=n>_owner</span><span class=p>)</span> <span class=k>external</span> <span class=k>view</span> <span class=k>returns</span><span class=p>(</span><span class=kt>uint</span><span class=p>[]</span> <span class=k>memory</span><span class=p>)</span> <span class=p>{</span>
-    <span class=kt>uint</span><span class=p>[]</span> <span class=k>memory</span> <span class=n>result</span> <span class=o>=</span> <span class=k>new</span> <span class=kt>uint</span><span class=p>[](</span><span class=n>ownerZombieCount</span><span class=p>[</span><span class=n>_owner</span><span class=p>]);</span>
-    <span class=c1>// Start here
-</span><span class=c1></span>    <span class=k>return</span> <span class=n>result</span><span class=p>;</span>
-  <span class=p>}</span>
-</code></pre></td></tr></table>
-</div>
-</div>
+<h1 id=french>French</h1>
+<blockquote>
+<p>My Goal : Improve Speaking Ability</p>
+</blockquote>
+<h2 id=speaking-exercises>Speaking Exercises</h2>
+<ol>
+<li>Speak freely about any subject</li>
+<li>Tell a story about my life and record it</li>
+<li>Read a article and every 2 paragraphs, summarize what it is about</li>
+<li>Watch a video and discuss what it was about</li>
+</ol>
+<h1 id=accent>Accent</h1>
+<p>Listen to someone who has the exact accent that I want to mimic (Eg. Omar Sy, Vincent Cassel, Damso)</p>
+<p>Protocol : Listen to person who has the accent u want for ~2 mins and then continue reading the artciel out loud</p>
 </article>
 <hr>
 <div class=page-end>
@@ -118,7 +73,7 @@ Last updated Unknown
 <h3>Backlinks</h3>
 <ul class=backlinks>
 <li>
-<a href=/quartz/notes/smart-contracts>Smart Contracts</a>
+<a href=/quartz/notes/personal-stuff>Personal Stuff</a>
 </li>
 </ul>
 </div>
@@ -128,7 +83,7 @@ Last updated Unknown
 <div id=graph-container></div>
 <style>:root{--g-node:var(--secondary);--g-node-active:var(--primary);--g-node-inactive:var(--visited);--g-link:var(--outlinegray);--g-link-active:#5a7282}</style>
 <script src=https://ivanleomk.github.io/quartz/js/graph.27e8521c25c27c79dea35f434c486167.js></script>
-<script>drawGraph("https://ivanleomk.github.io/quartz/notes/solidity-gas-optimization","https://ivanleomk.github.io/quartz",[{"/moc":"#4388cc"}],-1,!0,!1,!0)</script>
+<script>drawGraph("https://ivanleomk.github.io/quartz/notes/protocol-list","https://ivanleomk.github.io/quartz",[{"/moc":"#4388cc"}],-1,!0,!1,!0)</script>
 </div>
 </div>
 <div id=contact_buttons>
