@@ -9,3 +9,4 @@ I'm currenltly pre-occupied with learning about
 - [[Trading Bots]]
 - [[Testing With Cypress]]
 - [[Web3]]
+- [[NextJS]]

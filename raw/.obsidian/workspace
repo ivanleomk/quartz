@@ -4,12 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "c8fca862acc71690",
+        "id": "410fb38101a5e44a",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "notes/Ethereum Virtual Machine.md",
+            "file": "notes/Technical Stuff.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "b9ee978302ec2b9e",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "notes/NextJS.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/Ethereum Virtual Machine.md",
+                "file": "notes/NextJS.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +98,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/Ethereum Virtual Machine.md"
+                "file": "notes/NextJS.md"
               }
             }
           }
@@ -97,17 +109,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "c8fca862acc71690",
+  "active": "b9ee978302ec2b9e",
   "lastOpenFiles": [
+    "notes/NextJS.md",
+    "notes/Technical Stuff.md",
+    "templates/post.md",
+    "_index.md",
+    "notes/Protocol List.md",
+    "notes/Personal Stuff.md",
+    "notes/Productivity.md",
     "notes/Ethereum Virtual Machine.md",
     "notes/Web3.md",
-    "notes/Proof of Work.md",
-    "notes/Blockchain Mining.md",
-    "notes/Gas.md",
-    "notes/ERC Token Standards.md",
-    "notes/Solidity.md",
-    "notes/Solidity Gas Optimization.md",
-    "notes/Smart Contracts.md",
-    "private/Governing as Gardening.md"
+    "notes/Proof of Work.md"
   ]
 }
