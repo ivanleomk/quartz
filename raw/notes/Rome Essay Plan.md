@@ -12,7 +12,7 @@ last-updated: "2022-04-21"
 
 > Summary
 
-**Introduction**
+# Rough Overview
 
 - In pre-modern societies, clean water was a frequently scarce resource which was avaliable to few.
 	- There existed different ways to hydrate yourself using methods such as Alcohol, boiled water and for the ancient Romans, fresh water that was running from aqueducts
@@ -37,7 +37,7 @@ last-updated: "2022-04-21"
 
 
 
-**Introdution**
+# Draft Points and additional Info
 
 - In pre-modern societies, clean water was a frequently scarce resource which was avaliable to few.
 	- There existed different ways to hydrate yourself using methods such as Alcohol, boiled water and for the ancient Romans, fresh water that was running from aqueducts
