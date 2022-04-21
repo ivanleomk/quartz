@@ -60,4 +60,17 @@ Rome ( 4-5 days )
 
 Florence
 - Very touristy place
-- 
+
+
+- **P1 :** Romans had market oriented, highly efficient process of agriculture produce & an extensive transportation network to ship it all over the Roman empire.
+	- Romans had a high standard of living
+		- Roman people are still slightly taller than Neopolitan humans in the 1960s And live quite long lives relatively
+		- Variety of food and vegetables even for the working class people. Black pepper found in the diet, which can only be imported from India. So they eat quite well, and they are able to get their food through the markets. 
+	- Pre-modern Industrialisation : 
+		- **Eg 1**:  Pig stys existed which were built with economic scaling in mind to sustain a market demand. Pigs were fed a consistent diet instead of left to graze.
+		- **Elaboration 1**: This indicates a implicit desire to optimise these processes in order to maximise profit that could be obtained from them
+		- **Eg 2** : Fish Sauce made from anchovies which are seasonary migratory fish. Older excations show faciltiies where there is a deliberate arrangement of each stage of the fermentation process. 
+		- **Elaboration 2** : This shows a deliberate optimisation of the process of fermenting the fish with clear specificalisation of labor for each step of the process.
+	- Quite uniform cullinary intake throughout the empire, which implies that the same raw materials can be transported everywhere throughout the empire.
+	- Chain of commerce for the resale of goods like pepper from the source all the way until retail. Availability of spices and necessities everywhere to everyone in the cities because of huge demand in the cities.
+	

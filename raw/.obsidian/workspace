@@ -4,24 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "410fb38101a5e44a",
+        "id": "f3983652ca3e48d0",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "notes/Technical Stuff.md",
+            "file": "_index.md",
             "mode": "source",
             "source": false
           }
         }
       },
       {
-        "id": "b9ee978302ec2b9e",
+        "id": "5678374967c2a8ad",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "notes/NextJS.md",
+            "file": "notes/Water Supply, Drainage and Water Mills.md",
             "mode": "source",
             "source": false
           }
@@ -81,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/NextJS.md",
+                "file": "_index.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +98,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/NextJS.md"
+                "file": "_index.md"
               }
             }
           }
@@ -107,19 +107,20 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
-  "active": "b9ee978302ec2b9e",
+  "active": "f3983652ca3e48d0",
   "lastOpenFiles": [
-    "notes/NextJS.md",
-    "notes/Technical Stuff.md",
-    "templates/post.md",
     "_index.md",
-    "notes/Protocol List.md",
-    "notes/Personal Stuff.md",
-    "notes/Productivity.md",
-    "notes/Ethereum Virtual Machine.md",
-    "notes/Web3.md",
-    "notes/Proof of Work.md"
+    "notes/Rome Essay Plan.md",
+    "notes/Water Supply, Drainage and Water Mills.md",
+    "private/Ancient Roman History in a Nutshell.md",
+    "Untitled.md",
+    "notes/Untitled.md",
+    "notes/What I'm Reading.md",
+    "templates/post.md",
+    "notes/Configuring NextJS.md",
+    "notes/NextJS.md"
   ]
 }

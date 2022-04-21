@@ -13,6 +13,8 @@ Here's a quick content map for your reference
 - [[Project Ideas]]
 
 I'll add on more things with time
+
+[[Rome Essay Plan]]
 `
 
 

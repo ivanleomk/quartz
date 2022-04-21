@@ -8,14 +8,16 @@ title: What I'm Reading
 To see a list of all the articles which i've read recently check out my reading [[highlights]].
 Articles on this page however are ones which I would recommend to friends. I might link them at some point to other bits of info which I've considered but no guarantees
 
-Here are some summaries of texts I've read
+Here are some summaries of texts I've read that don't have online editions
 - [[Ancient Roman History in a Nutshell]]
+- [[Water Supply, Drainage and Water Mills]]
 
 ## Mindset
 
 - [[Choose Your Status Game Wisely]]
 - [[Why I got a PhD at age 61]]
 - [[Life is Short]]
+- [[On Friendship and on Finding Your People]] : I thought this was a rather sobering read at the author's own reflections after finishing college. Highly recommend.
 
 ## Programming
 - [[Two vexing problems in functional programming]]
