@@ -9,6 +9,34 @@ last-updated: "2022-04-21"
 > Thesis Statement : Water today is a right that we take for granted. For the romans however, acess to water was something which was competently handled and also political in nature
 
 
+
+> Summary
+
+**Introduction**
+
+- In pre-modern societies, clean water was a frequently scarce resource which was avaliable to few.
+	- There existed different ways to hydrate yourself using methods such as Alcohol, boiled water and for the ancient Romans, fresh water that was running from aqueducts
+	- Stagnant water was dangerous because of potential dangers such as breeding insects and other water borne diseases. 
+- Point 1 : Private access to water is used as a way to demonstrate one's social status in the social hierachy.
+	- Private access can only be granted by the emperor
+	- 38% of avaliable water was distributed via private access
+	- It was a much sought after privilege  and individuals could demonstrate that they belonged to the upper echelons of society by posessing this private access
+	- Private access used as a means to power private baths and other water arrangements in home gardens
+- Point 2 : Citizens come to see access to water and baths as a right and as something which the emperor should provide
+	- There was an entire separate governing body - the *curatores aquarum* - which handled the distribution of water.
+	- The emperor was expected to provide for his citizens and the imperial baths for instance. This bath represented a form of luxury that the comoners of Rome could enjoy for free and that the emperor was expected to provide So that they can also enjoy the luxuries that the aristocrats also enjoy, especially given their small apartments. 
+	
+- Point 3 : The building of infrastructure to support these wate projects demonstrates the stability of the emperor's rule
+	- Romans posess a large amount of pride over their water system, which they come to see as a testament to their mastery over nature
+		- The creation of an aqueduct was not an easy task. Very shallow incline to be maintained across a huge extent of land. So need specialists and engineers to build this.   
+		- At the same time, it required a lot of investment and a large amount of technical expertise.
+	- The devellopment of the aqueducts by agrippa allows for large amounts of improvement in public sanitation
+	-  The total length of the aqueducts is over 500 km and the estimated amount of water supplied was about 1 million m^3 of water per day.
+
+
+
+
+
 **Introdution**
 
 - In pre-modern societies, clean water was a frequently scarce resource which was avaliable to few.
@@ -46,4 +74,10 @@ last-updated: "2022-04-21"
 - This is an enormous amount of water and exceeds the consumption in some of the largest cities even today.
 - The emperor was expected to provide for his citizens and the imperial baths for instance, represented a form of luxury that the comoners of Rome could enjoy for free and that the emperor was expected to provide. 
 	- So that they can also enjoy the luxuries that the aristocrats also enjoy, especially given their small apartments. 
+
+
+
+
+
+
 
