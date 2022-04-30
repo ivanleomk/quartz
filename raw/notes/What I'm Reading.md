@@ -4,7 +4,13 @@ title: What I'm Reading
 
 > Here's a quick collection of articles I liked and read recently. Books will be separately filed at some point
 
-## Things I Liked
+# Books 
+
+## Reading
+
+[[The Millionare Fastlane]]
+
+# Articles I've Liked
 To see a list of all the articles which i've read recently check out my reading [[highlights]].
 Articles on this page however are ones which I would recommend to friends. I might link them at some point to other bits of info which I've considered but no guarantees
 

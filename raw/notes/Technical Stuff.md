@@ -10,3 +10,4 @@ I'm currenltly pre-occupied with learning about
 - [[Testing With Cypress]]
 - [[Web3]]
 - [[NextJS]]
+- [[Intro To Data Science]]

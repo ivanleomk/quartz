@@ -14,8 +14,6 @@ Here's a quick content map for your reference
 
 I'll add on more things with time
 
-[[Rome Essay Plan]]
-`
 
 
 

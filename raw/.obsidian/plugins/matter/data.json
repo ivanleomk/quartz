@@ -1,11 +1,11 @@
 {
-  "accessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjUxMTU4MTY2LCJqdGkiOiI2MWYxNmNjZWFjZDk0MzQ1YjQ3NDIzYjI3ZWNhZGZiYiIsInVzZXJfaWQiOjQ2MTAyLCJjbGllbnRfdHlwZSI6ImludGVncmF0aW9uIiwibG9naW5fc2Vzc2lvbl9pZCI6IjJmMjA3NWE0LWIwNjMtNDhmYi1iYTQ5LTkwODdhZjYwMTVlNiJ9.4E1DpWUc-rz6vw_asC6sNKO0aGMkXv_lQqyls4MGPm8",
-  "refreshToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY1ODI0Mjk2NiwianRpIjoiMmFmZTc1NDlmYmJiNGZjMzk0NTEzYWUyYjk4ZTBkY2MiLCJ1c2VyX2lkIjo0NjEwMiwiY2xpZW50X3R5cGUiOiJpbnRlZ3JhdGlvbiIsImxvZ2luX3Nlc3Npb25faWQiOiIyZjIwNzVhNC1iMDYzLTQ4ZmItYmE0OS05MDg3YWY2MDE1ZTYifQ.yryySL-5m26jN4RgGZ5pXSZHzSbXZShNCm-w4_i5zQc",
+  "accessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjUxOTI2NzU4LCJqdGkiOiI2OTBkZjhjN2Y5MTg0YTk1OGZhNDM4Zjg1MTkyN2ZkNiIsInVzZXJfaWQiOjQ2MTAyLCJjbGllbnRfdHlwZSI6ImludGVncmF0aW9uIiwibG9naW5fc2Vzc2lvbl9pZCI6IjJmMjA3NWE0LWIwNjMtNDhmYi1iYTQ5LTkwODdhZjYwMTVlNiJ9.GvRbKIm7PmS0n7Un6WXT5B7KXcjLheyihvix5Q0WL7g",
+  "refreshToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY1OTAxMTU1OCwianRpIjoiZDNlZjI4MDUwYzMzNDI4NmE2YjI3ZTAzNjI2NTA5M2QiLCJ1c2VyX2lkIjo0NjEwMiwiY2xpZW50X3R5cGUiOiJpbnRlZ3JhdGlvbiIsImxvZ2luX3Nlc3Npb25faWQiOiIyZjIwNzVhNC1iMDYzLTQ4ZmItYmE0OS05MDg3YWY2MDE1ZTYifQ.TW8tx8X6yr36dJAb0gAG_mfz44MvYt-uTwXlHfdQDyk",
   "qrSessionToken": "3579b8246b9f07bd54e52f97503b9e1d45cb4d6b2502628d99b5bb69e07ea0f1",
   "dataDir": "./highlights",
   "syncInterval": 720,
   "hasCompletedInitialSetup": true,
-  "lastSync": "2022-04-21T03:03:40.966Z",
+  "lastSync": "2022-04-30T02:50:34.408Z",
   "isSyncing": false,
   "contentMap": {
     "Life is Short.md": "4_59985",
@@ -63,6 +63,9 @@
     "DeFi- In Simple Photos and How to Make Your First Transaction!.md": "4_3498753",
     "Change Your Psychology and the Cartoon 10 Commandments.md": "4_1169280",
     "Crypto vs. Global Money Supply and The 2001 Tech Bubble.md": "4_413706",
-    "A gentle introduction to Ethereum.md": "4_963282"
+    "A gentle introduction to Ethereum.md": "4_963282",
+    "Regret Minimization, $120 Million Collapse, & More.md": "4_3554636",
+    "3-2-1- Innovative thinking, the trap of self-pity, and how to spend your time.md": "4_3525978",
+    "Protein- What You Need to Know.md": "4_3762711"
   }
 }
