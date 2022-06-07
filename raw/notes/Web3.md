@@ -56,3 +56,6 @@ Etherium uses [[Gas]] in order to power the individual smart contracts.
 > A **_token_** on Ethereum is basically just a smart contract that follows some common rules — namely it implements a standard set of functions that all other token contracts share, such as `transferFrom(address _from, address _to, uint256 _tokenId)` and `balanceOf(address _owner)`.
 
 We can learn more about [[ERC Token Standards]] here.
+
+
+

@@ -1,0 +1,67 @@
+---
+title: "Asking Simple Questions En Francais"
+last-updated: "2022-05-31"
+---
+
+- Asking questions in French
+	- Quand tu veux poser un question, tu ne dois que utiliser les trois formes dessous
+		- Tu travailles aujourd'hui? ( Just using a question mark )
+		- Est-ce que tu travailles aujourd'hui? ( Using Est-ce que )
+		- Travailles-tu aujourd'hui? ( Verb inversion )
+- We can create more open-ended questions by adding in more question words
+	- Qui ( Who )
+		- Qui est-ce que tu aimes?
+		- Qui est-ce que tu baises, epouses et tues
+	- Avec Qui ( With whom ? )
+		- Avec qui est-ce que tu rigoles le plus?
+	- Quand
+		- Quand est-ce que tu rigoles le plus?
+	- A quelle heure
+		- A quelle heure es-ce que vous pensez arriver?
+	- Qu'est-ce que ( what are you ... )
+		- Qu'est-ce que tu utilises comme site pour apprendre le francais
+		- Qu'est que tu manges? ( What are u eating )
+	- Comment ( How )
+		- Comment est-ce qu'on utilise ce truc? ( How do you use this thing )
+	- Combien ( How many )
+		- Combien de fois par mois est-ce qu'ils gagnent au loto ?
+	- Where
+		- Où est-ce que tu achètes tes légumes bios
+	- Pourquoi
+		- Pourquoi est-ce que tu fumes? (Why do you smoke? )
+- Using Ca, Si and Non for emphasis
+	- Ca : Using this just at the end
+		- Où est-ce que tu habites ? => Oui, mais où ça ? ( Where is this? )
+		- Le voyage ne dure que deux heures! => Comment ça ?
+	- Non ( For positive question )
+		- Vous êtes américain, non/n'est-ce-pas ( You're american , right? )
+	- Si ( For negative questions )
+		- Vous n'êtes pas américain, si
+- T-il ( When we use an inverted question, the il/elle/on requires an extra t for the sound to carry over )
+	- Mange-t-il de la viande? instead of Mange-il de la viande ?
+
+
+Words
+- [x] Est-ce qu'il faut repeter a chaque fois?
+- [x] Est-ce qu'on voyage cet ete?
+- [x] J'ai mal a la gorge
+- [x] Ca c'est suffisant pour la maintenant ( ok, this is enoguh for the moment )
+- [x] On va continuer dans un instant ( We can continue in an instant )
+- [x] Comment ? (what? Don't use Quoi, which is more aggressive )
+- [x] Où est-ce que tu comptes voyager cette année ? ( Where do you plan to travel this year? )
+- [x] Combien de fois par an est-ce que vous voyagez ensemble ? ( How many times a year do you travel together)
+- [x] Avec qui est-ce que tu voyages demain ( With who are you travelling with? )
+- [x] Bon courage ( Good Luck )
+- [x] au cas (In case, eg. Prepare cinq questions en avance pour éviter des moments de silence au cas où ils arrivent )
+- [x] Je me leve a 8 heures ( I wake up at 8 o clock )
+- [x] Tu passes combien de temps avec ta famille? ( How much time do you spend with your family )
+- [x] Qu'est-ce que tu regardes a la tele quand il n'y a personne autour ( What do you watch when nobody is around? )
+- [x] Pourquoi est-ce que tu traites ta maman comme ca
+- [x] Depuis quand est-ce que vous habitez ensemble?
+- [x] Penses-tu changer ton comportement
+- [x] Comment ca marche ce truc ( How does this thing work )
+- [x] Quand es-ce que vous avez demenage a Paris ( When did you move to Paris? )
+- [x] C'est combien le loyer? ( How much is the rent )
+- [x] Comment est-ce que vous vous etes recontres? ( How did you guys meet )
+- [x] Bah pourquoi pas? ( Why not ) 
+- [x] Est-ce que tu t'amuses ( Are you having fun? )

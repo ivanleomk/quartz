@@ -9,6 +9,11 @@ title: What I'm Reading
 ## Reading
 
 [[The Millionare Fastlane]]
+[[The Coding Career Handbook]]
+
+# Online Resources
+
+[[Complete Freelancing Bundle - Kyle]]
 
 # Articles I've Liked
 To see a list of all the articles which i've read recently check out my reading [[highlights]].

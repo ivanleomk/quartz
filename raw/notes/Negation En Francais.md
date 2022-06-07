@@ -1,0 +1,64 @@
+---
+title: "Negation En Francais"
+last-updated: "2022-05-30"
+---
+
+- La Negation
+	- Ne Verbe Pas
+- Penser vs Reflechir
+	- There is a strong difference between penser ( to think ) and reflechir
+	- Pense : Automatic and to give an opinion
+		- Tu penses que je parle bien espagnol
+		- Je pense à ma maman. Elle habite dans un autre pays, très loin.
+		
+	- Reflechir : To actively reflect on a concept
+		- Avant décider si je déménage à Barcelone ou pas, je dois réfléchir.
+		- Je réfléchis aussi à une nouvelle solution pour ma vie de merde
+		- J'aime prendre un bain et réfléchir sur la vie
+	- Trouver : Expressing an opinion
+		- Tu trouves qu'il est beau? ( Do you think that he is cute ?)
+- Ne
+	- Ne __ pas ( Don't )
+	- Ne __ Jamais ( Never )
+	- Ne ___ plus ( No Longer)
+	- Ne ___ pas encore ( Not yet )
+	- Ne __ que ( only )
+	- Ne __ rien ( None )
+	- Ne __ accun ( Don't have any )
+- Si
+	- It's a Yes in response to a negative question
+	- Eg. Tu ne parles pas francais => Si, je parle Francais
+- Nobody or Nothing
+	- Eg. Personne ne ...  (nobody)
+		- Personne ne m'aime! Pourquoi
+		- Personne ne te rend heureux (heureuse), à part toi-même.
+		- Personne ne me plaît sur Tinder. Ils sont tous moches.
+	- Eg. Rien ne ... ( Nothing )
+		- Rien ne change dans ma vie, mais bon, je ne fais pas d'effort non plus.
+		- Rien ne m'intéresse en ce moment. Je m'ennuie, en vrai. Il faut que je voyage.
+	- Eg. Accun(e) ... ( No )
+		- Aucun homme ne peut te plaire si tu ne peux pas te plaire d'abord.
+		- Aucune application mobile ne te donnera confiance si tu n'as pas confiance en toi d'abord.
+- Ni : Negative And
+	- Eg. Je ne travaille plus a New York, ni a Los Angeles
+
+**New Words**
+- Hicups : Avois Le Hoquet
+- [x] Je pense inviter un ami, fin, pas un ami, mais un collègue à la fête. ( Fin : Well... | Ok, anyway)
+- [x] Bref : In Conclusion ( Elle parle toujours de son ex mais l'histoire ne change pas. Bref*, il ne change pas.)
+- [x] Crois-Moi | Croyez-moi : Believe Me
+- [x] Je pense a toi
+- [x] Je (ne) voyage que 2 fois par an.  ( I only traveled 2 times per year )
+- [x] Je (ne) voyage pas parce que je n'ai rien à dépenser
+- [x]  Je (ne) voyage pas parce que je n'ai aucun argent sur mon compte.
+- [x]  Je (ne) voyage pas encore
+- [x] Je (ne) voyage avec personne (je voyage tout seul).
+- [x] Elle ne porte que des marques de luxe. Elle est très classe
+- [x] Je ne visite que des appartements dans le 4ème. Ouais pour moi, c'est le 4ème ou rien.
+- [x] Euhh...j'ai que dix euros sur moi
+- [x] Attends ( Wait)
+- [x] Tu ne danses pas ? ( Response : Si je danse. C'est just que je n'aime pas cette chanson )
+- [x] Je ne cherche rien ( I'm not searching for anything )
+- [x] Rien ne se passe chez moi ( Nothing happens at my house )
+- [x] C'est du passe ( That's in the past  )
+- [x] Non, pas encore (No, not yet)

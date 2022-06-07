@@ -85,6 +85,21 @@ Neither time nor yield can be leveraged or controlled, as a result, this is a su
 ### Education
 The slowlane sometimes deploys education as a way in order to increase their intrinsic value (Eg. getting an MBA) to increase their rate. However, they're still trading their time for money and this doesn't allow you to increase the amount of \$\$ you're earning
 
+ > The problem with formal education to raise intrinsic value is that it is extremely time and money intensive.
+ 
+ If you financed your advanced education with debt, the debt becomes parasitic and traps you into forced job servitude and that destroys freedom. Whether you owe $35,000 for your BMW or for student loans, debt steals freedom and forces indentured time.
+
+### Gurus
+> A paradox of practice exists when someone promotes a moneymaking strategy but that strategy is not what made him or her rich. In other words, they're not practitioners of their own advice. They effectively teach one wealth equation while they get rich leveraging another.
+
+### Slowlane Dangers
+- Health
+- Wealth
+- Home prices
+- Company going bust
+- Lifestyle creep
+- Slow walk~
+
 
 
 
@@ -127,3 +142,57 @@ Therefore, in a job we are selling our freedom ( in the form of time ) for money
 
 
 
+# The Roadmap
+> The Fastlane is a business and lifestyle strategy characterised by Controllable Unlimited Leverage (CUL), hence creating an optimal environment for rapid wealth creation and extraordinary lifestyles.
+
+This requires new mindset changes
+
+1. Time is the most important asset I have, far exceeding money
+2. The moment I stop learning is the moment I stop growing. Constant expansion of my knowledge and awareness is critical to my journey. 
+3. Money is everywhere and its extremely abundant. Money is a reflection of how many lives I've touched. Money reflects the value I've created.
+4. The more I help, the richer I become in time, money and personal fufilment
+5. Life is what I make it. My financial plan is entirely my responsibility and I choose how I react to my circumstances.
+
+> Ultimately, the goal is to build a better system and contraption that will leverage your work. We want to construct a system that does it for you.
+
+## Actionable Steps
+
+1. When you encounter an advertising message that coaxes you to buy something, examine it from the producer perspective. How does this company make money? What is the aim of its message? Is this company making a profit?
+2. You need to give birth to a business and offer the world value. A business is the key to the equation because it unlocks leverage, which swaps ULL for CUL.
+
+## Why Business?
+A business can survive time and is capable of earning income long after my original time investment. When you unlock yourself from the handcuffs of time, you can control and leverage larger amounts of money.
+
+$$
+\text{Wealth} = \text{Net Profit} + \text{Asset Value}
+$$
+> The Rich accelerate wealth by accelerating asset value and selling those upgraded assets in the marketplace
+
+$$
+\text{Asset Value} = (\text{Net Profit} + \text{Industry Multiplier})
+$$
+
+The goal is to ultimately **divorce your wealth from your time**. When your wealth is predicated on factors that you cannot control, you aren't going to make fast progress. You aren't in control, because time is in control.
+
+There are five business seedlings to money trees
+
+1. **Rental Systems** : Real estate is an asset that can be manipulated and its value appreciated. Appreciative assets are cornerstones in the Fastlane wealth equation. Rental systems are powerful money trees because they are high on the passivity scale and survive time.
+2. **Computer Systems** : Using the internet to scale different offerings
+3. **Content Systems** : Systems of information which you can use to be able to distribute content. Content is ultimately an asset that is saleable, over and over again, and with each sale, the effective time cost declines while the hourly rate of return expands.
+4. **Distribution System** : Distribution is a means to move product to the masses. If you can create a large company to move product to the masses, you'll be able to leverage a large amount of money
+5. **Human Resource System** : Managing people
+
+Compound interest pays the bills and is your tool. It's your passive income source but is not responsible for your wealth. A saved dollar is the best passive income instrument after all but you need a lot of them. 
+
+$$
+\text{Net Profit} = \text{Units Sold}(\text{Scale}) \times \text{Unit Profit} (\text{Magnitude})
+$$
+
+> Scale creates millionares. Magnitude creates millionares. Scale and magnitude creates billionares. 
+
+## What's Next?
+> You are the vehicle for your own wealth and the mechanism for movement. You are responsible for making the journey and the first step in taking charge of you, is to own you.
+
+
+
+ 

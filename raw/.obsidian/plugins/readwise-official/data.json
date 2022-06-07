@@ -4,8 +4,8 @@
   "frequency": "0",
   "triggerOnLoad": true,
   "isSyncing": false,
-  "lastSyncFailed": true,
-  "lastSavedStatusID": 4017452,
+  "lastSyncFailed": false,
+  "lastSavedStatusID": 4676539,
   "currentSyncStatusID": 0,
   "refreshBooks": false,
   "booksToRefresh": [],
@@ -19,7 +19,9 @@
     "Readwise/./Podcasts/76. Vocabulaire Et Traductions.md": "14791260",
     "Readwise/./Podcasts/10. Les Mots Français Qui Viennent De l'Anglais.md": "14791261",
     "Readwise/./Podcasts/12. 5 Ans Après Les Accords De Paris.md": "14791262",
-    "Readwise/./Podcasts/Effects of Fasting & Time Restricted Eating on Fat Loss & Health  Episode 41.md": "14791263"
+    "Readwise/./Podcasts/Effects of Fasting & Time Restricted Eating on Fat Loss & Health  Episode 41.md": "14791263",
+    "Readwise/./Books/Mind Full to Mindful.md": "15147757",
+    "Readwise/./Books/The Secret History of the Mongol Queens.md": "15147758"
   },
   "reimportShowConfirmation": true
 }
