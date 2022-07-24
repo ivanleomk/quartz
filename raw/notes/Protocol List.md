@@ -2,19 +2,21 @@
 title: "Protocol List"
 ---
 
-# French
+Here is a list of things I am currently doing, feel free to give thoughts and comments
 
-> My Goal : Improve Speaking Ability
+# Morning
 
-## Speaking Exercises
+- [x] 10 Minutes of French Reading + Annotations into Anki
+- [x] 10 Minutes of Reading
+- [x] 10 Minutes of Meditation
+- [x] 10 Minutes of Journalling
+- [x] 1 L of Water
+- [x] Coffee ~ 2 hours after waking up
+- [x] Supplementation ( Currently about 2000 IU vitamin D, 1 x Omega 3 )
 
-1. Speak freely about any subject
-2. Tell a story about my life and record it
-3. Read a article and every 2 paragraphs, summarize what it is about
-4. Watch a video and discuss what it was about
+
+Night
+- [ ] 4 Eggs ( Providing Cholesterol for testosterone production)
+- [ ] 3-4 Brazil Nuts + Pistachios
 
 
-# Accent
-Listen to someone who has the exact accent that I want to mimic (Eg. Omar Sy, Vincent Cassel, Damso)
-
-Protocol : Listen to person who has the accent u want for ~2 mins and then continue reading the artciel out loud

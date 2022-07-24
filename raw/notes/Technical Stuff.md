@@ -2,10 +2,12 @@
 title: Technical Things
 ---
 
+# Current
+- [[Atomic Kotlin]]
 
-I'm currenltly pre-occupied with learning about 
 
-
+# Past
+Things I have learnt a little bit about have been
 - [[Trading Bots]]
 - [[Testing With Cypress]]
 - [[Web3]]

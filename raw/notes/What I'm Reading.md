@@ -10,6 +10,8 @@ title: What I'm Reading
 
 [[The Millionare Fastlane]]
 [[The Coding Career Handbook]]
+[[Building a Second Brain]]
+
 
 # Online Resources
 

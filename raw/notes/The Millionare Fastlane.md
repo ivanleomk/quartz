@@ -190,9 +190,36 @@ $$
 
 > Scale creates millionares. Magnitude creates millionares. Scale and magnitude creates billionares. 
 
+
 ## What's Next?
 > You are the vehicle for your own wealth and the mechanism for movement. You are responsible for making the journey and the first step in taking charge of you, is to own you.
 
-
-
+ Poor choices are the leading cause of poverty. People don't choose to be poor, instead they make poor decisions that slowly assemble into a poorness puzzle.
  
+> Our choices have consequences that transcend decades
+
+We can utilise two potential forms of analysis in order to avoid poor decisions and choices.
+
+### Worst Case Consequence Analysis
+
+Just answer 3 questions
+
+1. What is the worst-case consequence of this choice?
+2. What is the probability of this outcome?
+3. Is this an acceptable risk?
+
+### Weighted Average Decision Matrix
+
+Just answer 3 questions
+
+1. What are the factors that matter to you. Give them a rating from 0 - 10 for each
+2. What are the rankings for each factor for the specific choice. Give it a ranking from  0 - 10
+3. Choose the option with the higher score
+
+> Extraordinary wealth will require you to have extraordinary beliefs.
+
+> Your Lifespan = Free Time + Indentured Time
+
+Your free time is yours to spend as you like while indentured time is the total time spent earning money and preparing to do the work to do so. Indentured time is the ransom of your free time
+
+**Chapter 26**
