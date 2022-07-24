@@ -1,0 +1,383 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta name=description content="Introduction  Kotlin is a compiled language which is compiled down into Bytecode and is then executed on the Java Virtual Machine .">
+<title>Atomic Kotlin</title>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel="shortcut icon" type=image/png href=/icon.png>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Sans+Pro:wght@400;600;700&family=Fira+Code:wght@400;700&display=swap" rel=stylesheet>
+<link href=https://ivanleomk.github.io/quartz/styles.39ca5b76d65c990dd43f1cd6a8d8b907.min.css rel=stylesheet>
+<script src=https://ivanleomk.github.io/quartz/js/darkmode.46b07878b7f5d9e26ad7a3c40f8a0605.min.js></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css integrity=sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs crossorigin=anonymous>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js integrity=sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:!0},{left:'$',right:'$',display:!1}],throwOnError:!1})})</script>
+<script>const BASE_URL="https://ivanleomk.github.io/quartz",fetchData=Promise.all([fetch("https://ivanleomk.github.io/quartz/indices/linkIndex.57c9c114f8fb8b15b232fb90f9a078bd.min.json").then(a=>a.json()).then(a=>({index:a.index,links:a.links})),fetch("https://ivanleomk.github.io/quartz/indices/contentIndex.55c77fc5b848e319c869c3c39de986eb.min.json").then(a=>a.json())]).then(([{index:a,links:b},c])=>({index:a,links:b,content:c}))</script>
+</head>
+<body>
+<div id=search-container>
+<div id=search-space>
+<input autocomplete=off id=search-bar name=search type=text aria-label=Search placeholder="Search for something...">
+<div id=results-container>
+</div>
+</div>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js integrity="sha256-i3A0NZGkhsKjVMzFxv3ksk0DZh3aXqu0l49Bbh0MdjE=" crossorigin=anonymous defer></script>
+<script defer src=https://ivanleomk.github.io/quartz/js/search.bc849b857f2c1b822264d40635bb67b6.min.js></script>
+<div class=singlePage>
+<header>
+<h1 id=page-title><a href=https://ivanleomk.github.io/quartz>Ivan's Digital Garden</a></h1><svg tabindex="0" id="search-icon" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc">Icon to open search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg>
+<div class=spacer></div>
+<div class=darkmode>
+<input class=toggle id=darkmode-toggle type=checkbox tabindex=-1>
+<label id=toggle-label-light for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="dayIcon" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35"><title>Light Mode</title><path d="M6 17.5C6 16.672 5.328 16 4.5 16h-3C.672 16 0 16.672.0 17.5S.672 19 1.5 19h3C5.328 19 6 18.328 6 17.5zM7.5 26c-.414.0-.789.168-1.061.439l-2 2C4.168 28.711 4 29.086 4 29.5 4 30.328 4.671 31 5.5 31c.414.0.789-.168 1.06-.44l2-2C8.832 28.289 9 27.914 9 27.5 9 26.672 8.329 26 7.5 26zm10-20C18.329 6 19 5.328 19 4.5v-3C19 .672 18.329.0 17.5.0S16 .672 16 1.5v3C16 5.328 16.671 6 17.5 6zm10 3c.414.0.789-.168 1.06-.439l2-2C30.832 6.289 31 5.914 31 5.5 31 4.672 30.329 4 29.5 4c-.414.0-.789.168-1.061.44l-2 2C26.168 6.711 26 7.086 26 7.5 26 8.328 26.671 9 27.5 9zM6.439 8.561C6.711 8.832 7.086 9 7.5 9 8.328 9 9 8.328 9 7.5c0-.414-.168-.789-.439-1.061l-2-2C6.289 4.168 5.914 4 5.5 4 4.672 4 4 4.672 4 5.5c0 .414.168.789.439 1.06l2 2.001zM33.5 16h-3c-.828.0-1.5.672-1.5 1.5s.672 1.5 1.5 1.5h3c.828.0 1.5-.672 1.5-1.5S34.328 16 33.5 16zM28.561 26.439C28.289 26.168 27.914 26 27.5 26c-.828.0-1.5.672-1.5 1.5.0.414.168.789.439 1.06l2 2C28.711 30.832 29.086 31 29.5 31c.828.0 1.5-.672 1.5-1.5.0-.414-.168-.789-.439-1.061l-2-2zM17.5 29c-.829.0-1.5.672-1.5 1.5v3c0 .828.671 1.5 1.5 1.5s1.5-.672 1.5-1.5v-3C19 29.672 18.329 29 17.5 29zm0-22C11.71 7 7 11.71 7 17.5S11.71 28 17.5 28 28 23.29 28 17.5 23.29 7 17.5 7zm0 18c-4.136.0-7.5-3.364-7.5-7.5s3.364-7.5 7.5-7.5 7.5 3.364 7.5 7.5S21.636 25 17.5 25z"/></svg>
+</label>
+<label id=toggle-label-dark for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="nightIcon" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'"><title>Dark Mode</title><path d="M96.76 66.458c-.853-.852-2.15-1.064-3.23-.534-6.063 2.991-12.858 4.571-19.655 4.571C62.022 70.495 50.88 65.88 42.5 57.5 29.043 44.043 25.658 23.536 34.076 6.47c.532-1.08.318-2.379-.534-3.23-.851-.852-2.15-1.064-3.23-.534-4.918 2.427-9.375 5.619-13.246 9.491-9.447 9.447-14.65 22.008-14.65 35.369.0 13.36 5.203 25.921 14.65 35.368s22.008 14.65 35.368 14.65c13.361.0 25.921-5.203 35.369-14.65 3.872-3.871 7.064-8.328 9.491-13.246C97.826 68.608 97.611 67.309 96.76 66.458z"/></svg>
+</label>
+</div>
+</header>
+<article>
+<h1>Atomic Kotlin</h1>
+<p class=meta>
+Last updated Unknown
+</p>
+<ul class=tags>
+</ul>
+<aside class=mainTOC>
+<h3>Table of Contents</h3>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#types>Types</a></li>
+</ol>
+<ol>
+<li><a href=#dictionaries>Dictionaries</a></li>
+<li><a href=#lists>Lists</a></li>
+<li><a href=#sets>Sets</a></li>
+<li><a href=#maps>Maps</a></li>
+</ol>
+<ol>
+<li><a href=#useful-kotlin>Useful Kotlin</a>
+<ol>
+<li><a href=#iterating-over-a-list>Iterating Over a list</a></li>
+</ol>
+</li>
+</ol>
+</nav>
+</aside>
+<h1 id=introduction>Introduction</h1>
+<blockquote>
+<p>Kotlin is a compiled language which is compiled down into Bytecode and is then executed on the
+<a rel=noopener class="internal-link broken" data-src=None>Java Virtual Machine
+</a>.</p>
+</blockquote>
+<p>We can see the basic scaffolding of a Kotlin program such as</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-kotlin data-lang=kotlin><span class=k>fun</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span>
+    <span class=n>println</span><span class=p>(</span><span class=s2>&#34;Hello, world!!!&#34;</span><span class=p>)</span>
+<span class=p>}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>We can then move on to declaring variables and values. The difference between the two is that <strong>values are immutable while variables are mutable</strong>.</p>
+<h2 id=types>Types</h2>
+<p>In Kotlin, we use types as a way to tell Kotlin how to use data. A type provides values from which an expression may be assigned.</p>
+<p>Kotlin by default gives us the Types of</p>
+<ul>
+<li>Int</li>
+<li>Double</li>
+<li>Boolean</li>
+<li>String</li>
+<li>Char</li>
+<li>String</li>
+</ul>
+<p>We can even specify the type of object we are getting by using different constructors</p>
+<h1 id=data-structures-in-kotlin>Data Structures in Kotlin</h1>
+<h2 id=dictionaries>Dictionaries</h2>
+<blockquote>
+<p>In Kotlin, a dictionary is known as a hashMap</p>
+</blockquote>
+<p>We can declare a dictionary by using</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>val map = hashMapOf&lt;Int, Int&gt;()
+</code></pre></td></tr></table>
+</div>
+</div><h2 id=lists>Lists</h2>
+<p>We need to explicitly delcare if we want a mutable or immutable list. If we don&rsquo;t say that we want a mutable list, we won&rsquo;t get one.</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-kotlin data-lang=kotlin><span class=n>listOf</span><span class=p>(</span><span class=m>1</span><span class=p>,</span><span class=m>2</span><span class=p>,</span><span class=m>3</span><span class=p>)</span> <span class=c1>// Immutable
+</span><span class=c1></span><span class=n>mutableListof</span><span class=p>(</span><span class=m>1</span><span class=p>,</span><span class=m>2</span><span class=p>,</span><span class=m>3</span><span class=p>)</span> <span class=c1>//mutable
+</span></code></pre></td></tr></table>
+</div>
+</div><p>We can then proceed to add elements by using</p>
+<ul>
+<li><code>.add()</code> : Single item</li>
+<li><code>.addAll()</code> : Entire collection</li>
+</ul>
+<p>Useful methods include</p>
+<ul>
+<li><code>distinct()</code> : This returns a List which contains only unique characters</li>
+</ul>
+<h2 id=sets>Sets</h2>
+<blockquote>
+<p>A set is a collection that allows only one element of each value</p>
+</blockquote>
+<p>We can create a set by using the <code>toSet()</code> ( List → Set ) or <code>setOf</code> constructor. The following are some useful methods</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-kotlin data-lang=kotlin><span class=k>val</span> <span class=py>intSet</span> <span class=p>=</span> <span class=n>setOf</span><span class=p>(</span><span class=m>1</span><span class=p>,</span> <span class=m>1</span><span class=p>,</span> <span class=m>2</span><span class=p>,</span> <span class=m>3</span><span class=p>,</span> <span class=m>9</span><span class=p>,</span> <span class=m>9</span><span class=p>,</span> <span class=m>4</span><span class=p>)</span>
+
+<span class=c1>// No duplicates:
+</span><span class=c1></span><span class=n>intSet</span> <span class=n>eq</span> <span class=n>setOf</span><span class=p>(</span><span class=m>1</span><span class=p>,</span> <span class=m>2</span><span class=p>,</span> <span class=m>3</span><span class=p>,</span> <span class=m>4</span><span class=p>,</span> <span class=m>9</span><span class=p>)</span>
+
+<span class=c1>// Element order is unimportant:
+</span><span class=c1></span><span class=n>setOf</span><span class=p>(</span><span class=m>1</span><span class=p>,</span> <span class=m>2</span><span class=p>)</span> <span class=n>eq</span> <span class=n>setOf</span><span class=p>(</span><span class=m>2</span><span class=p>,</span> <span class=m>1</span><span class=p>)</span>
+
+<span class=c1>// Set membership:
+</span><span class=c1></span><span class=p>(</span><span class=m>9</span> <span class=k>in</span> <span class=n>intSet</span><span class=p>)</span> <span class=n>eq</span> <span class=k>true</span>
+<span class=p>(</span><span class=m>99</span> <span class=k>in</span> <span class=n>intSet</span><span class=p>)</span> <span class=n>eq</span> <span class=k>false</span>
+
+<span class=n>intSet</span><span class=p>.</span><span class=n>contains</span><span class=p>(</span><span class=m>9</span><span class=p>)</span> <span class=n>eq</span> <span class=k>true</span>
+<span class=n>intSet</span><span class=p>.</span><span class=n>contains</span><span class=p>(</span><span class=m>99</span><span class=p>)</span> <span class=n>eq</span> <span class=k>false</span>
+
+<span class=c1>// Does this set contain another set?
+</span><span class=c1></span><span class=n>intSet</span><span class=p>.</span><span class=n>containsAll</span><span class=p>(</span><span class=n>setOf</span><span class=p>(</span><span class=m>1</span><span class=p>,</span> <span class=m>9</span><span class=p>,</span> <span class=m>2</span><span class=p>))</span> <span class=n>eq</span> <span class=k>true</span>
+
+<span class=c1>// Set union:
+</span><span class=c1></span><span class=n>intSet</span><span class=p>.</span><span class=n>union</span><span class=p>(</span><span class=n>setOf</span><span class=p>(</span><span class=m>3</span><span class=p>,</span> <span class=m>4</span><span class=p>,</span> <span class=m>5</span><span class=p>,</span> <span class=m>6</span><span class=p>))</span> <span class=n>eq</span>
+<span class=n>setOf</span><span class=p>(</span><span class=m>1</span><span class=p>,</span> <span class=m>2</span><span class=p>,</span> <span class=m>3</span><span class=p>,</span> <span class=m>4</span><span class=p>,</span> <span class=m>5</span><span class=p>,</span> <span class=m>6</span><span class=p>,</span> <span class=m>9</span><span class=p>)</span>
+
+<span class=c1>// Set intersection:
+</span><span class=c1></span><span class=n>intSet</span> <span class=n>intersect</span> <span class=n>setOf</span><span class=p>(</span><span class=m>0</span><span class=p>,</span> <span class=m>1</span><span class=p>,</span> <span class=m>2</span><span class=p>,</span> <span class=m>7</span><span class=p>,</span> <span class=m>8</span><span class=p>)</span> <span class=n>eq</span>
+<span class=n>setOf</span><span class=p>(</span><span class=m>1</span><span class=p>,</span> <span class=m>2</span><span class=p>)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id=maps>Maps</h2>
+<blockquote>
+<p>Maps allow for key-value lookups</p>
+</blockquote>
+<p>Maps are read-only. In order to make them Mutable, we need to delare them as <code>mutableMapOf</code></p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-kotlin data-lang=kotlin>
+</code></pre></td></tr></table>
+</div>
+</div><h1 id=oop>OOP</h1>
+<blockquote>
+<p>Objects are used to hold data and perform actions. An object-oriented languages creates and uses objects</p>
+</blockquote>
+<p>An object has</p>
+<ul>
+<li>Data => These are known as properties</li>
+<li>Actions => Functions it executes using its properties</li>
+</ul>
+<p>Here are some specific bits of definitions</p>
+<ul>
+<li>An object is an instance of a class.</li>
+<li>A class is a blueprint of how to construct the object</li>
+<li>A member is a property or function that belongs to an object</li>
+<li>Member Functions : Member functions are functions that only work with specific classes</li>
+<li>We create an instance of an object when we make a val or var of a class</li>
+</ul>
+<p>We can define classes by using the <code>class</code> keyword</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-kotlin data-lang=kotlin><span class=k>class</span> <span class=nc>Computer</span><span class=p>{</span>
+	<span class=k>val</span> <span class=py>color</span> <span class=p>=</span> <span class=s2>&#34;Space-Grey&#34;</span>
+
+
+	<span class=k>fun</span> <span class=nf>turnOn</span><span class=p>(){</span>
+		<span class=n>println</span><span class=p>(</span><span class=s2>&#34;Turning On!&#34;</span><span class=p>)</span>
+	<span class=p>}</span>
+
+	<span class=k>fun</span> <span class=nf>restart</span><span class=p>(){</span>
+	    <span class=n>println</span><span class=p>(</span><span class=s2>&#34;System shutting down....&#34;</span><span class=p>)</span>
+	    <span class=k>this</span><span class=p>.</span><span class=n>turnOn</span><span class=p>()</span>
+	<span class=p>}</span>
+<span class=p>}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>We can maintain state within a class by defining properties.</p>
+<ul>
+<li>For immutable constants, consider using <code>vals</code>, else <code>vars</code></li>
+<li>When we create an object, it is actually a reference to the underlying object.</li>
+</ul>
+<p>We can also initialize our classes with specific values by modifying the syntax as seen below</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-kotlin data-lang=kotlin><span class=k>class</span> <span class=nc>Computer</span><span class=p>(</span>
+  <span class=k>val</span> <span class=py>name</span><span class=p>:</span><span class=n>String</span><span class=p>,</span>
+  <span class=k>val</span> <span class=py>age</span><span class=p>:</span> <span class=n>Int</span><span class=p>,</span>
+  <span class=k>val</span> <span class=py>brand</span><span class=p>:</span> <span class=n>String</span>
+<span class=p>){</span>
+
+
+  <span class=k>fun</span> <span class=nf>getBrand</span><span class=p>(){</span>
+    <span class=n>println</span><span class=p>(</span><span class=s2>&#34;</span><span class=si>$brand</span><span class=s2>&#34;</span><span class=p>)</span>
+  <span class=p>}</span>
+
+  <span class=k>fun</span> <span class=nf>getName</span><span class=p>(){</span>
+    <span class=n>println</span><span class=p>(</span><span class=s2>&#34;</span><span class=si>$name</span><span class=s2>&#34;</span><span class=p>)</span>
+  <span class=p>}</span>
+
+  <span class=k>fun</span> <span class=nf>getAge</span><span class=p>(){</span>
+    <span class=n>println</span><span class=p>(</span><span class=s2>&#34;</span><span class=si>$age</span><span class=s2>&#34;</span><span class=p>)</span>
+  <span class=p>}</span>
+
+  <span class=k>fun</span> <span class=nf>turnOn</span><span class=p>(){</span>
+		<span class=n>println</span><span class=p>(</span><span class=s2>&#34;Turning On!&#34;</span><span class=p>)</span>
+	<span class=p>}</span>
+
+	<span class=k>fun</span> <span class=nf>restart</span><span class=p>(){</span>
+	    <span class=n>println</span><span class=p>(</span><span class=s2>&#34;</span><span class=se>\n\n</span><span class=s2>System shutting down....&#34;</span><span class=p>)</span>
+      <span class=c1>// `This` here is a reference to the specific instance of a Computer
+</span><span class=c1></span>	    <span class=k>this</span><span class=p>.</span><span class=n>turnOn</span><span class=p>()</span>
+	<span class=p>}</span>
+
+<span class=p>}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>We can override specific generic functions such as <code>toString</code> so that they work differently for our class</p>
+<p>We can then protect specific aspects of our class by using</p>
+<ul>
+<li>public : can be called by client programmers</li>
+<li>private : Only accessible within the class itself</li>
+</ul>
+<h2 id=useful-kotlin>Useful Kotlin</h2>
+<h3 id=iterating-over-a-list>Iterating Over a list</h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-kotlin data-lang=kotlin><span class=n>nums</span><span class=p>.</span><span class=n>forEachIndexed</span> <span class=p>{</span> <span class=n>index</span><span class=p>,</span> <span class=n>i</span> <span class=o>→</span>
+            <span class=c1>// do something
+</span><span class=c1></span>        <span class=p>}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+</article>
+<hr>
+<div class=page-end>
+<div class=backlinks-container>
+<h3>Backlinks</h3>
+<ul class=backlinks>
+<li>
+<a href=/quartz/notes/technical-stuff>Technical Things</a>
+</li>
+</ul>
+</div>
+<div>
+<script src=https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI=" crossorigin=anonymous></script>
+<h3>Interactive Graph</h3>
+<div id=graph-container></div>
+<style>:root{--g-node:var(--secondary);--g-node-active:var(--primary);--g-node-inactive:var(--visited);--g-link:var(--outlinegray);--g-link-active:#5a7282}</style>
+<script src=https://ivanleomk.github.io/quartz/js/graph.27e8521c25c27c79dea35f434c486167.js></script>
+<script>drawGraph("https://ivanleomk.github.io/quartz/notes/atomic-kotlin","https://ivanleomk.github.io/quartz",[{"/moc":"#4388cc"}],-1,!0,!1,!0)</script>
+</div>
+</div>
+<div id=contact_buttons>
+<footer>
+<p>Made by Ivan Leo using <a href=https://github.com/jackyzha0/quartz>Quartz</a>, © 2022</p>
+<ul>
+<li><a href=/>Home</a></li>
+<li><a href=https://twitter.com/ivanleomk>Twitter</a></li><li><a href=https://github.com/ivanleomk>Github</a></li></ul>
+</footer>
+</div>
+<script src=https://ivanleomk.github.io/quartz/js/popover.9d69dffc0f2d029ef30cf63230ccce4c.min.js></script>
+<script>initPopover("https://ivanleomk.github.io/quartz")</script>
+</div>
+</body>
+</html>
