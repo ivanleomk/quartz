@@ -202,7 +202,7 @@ def copy_content_images():
     
     for image in os.listdir(content_images):
         curr_path = os.path.join(IN_DIR,"assets",image)
-        new_path = os.path.join(OUT_DIR,"assets",image.lower())
+        new_path = os.path.join(OUT_DIR,"assets",image)
         shutil.copy(curr_path,new_path)
 
 
