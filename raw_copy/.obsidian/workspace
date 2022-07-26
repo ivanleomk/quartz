@@ -4,11 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "e2827dba9f8071d7",
+        "id": "9620aa7376e4c991",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "notes/Ethereum Virtual Machine.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -49,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 309.5
   },
   "right": {
     "id": "03be793b38f485fc",
@@ -65,7 +69,8 @@
             "state": {
               "type": "backlink",
               "state": {
-                "collapseAll": false,
+                "file": "notes/Ethereum Virtual Machine.md",
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -74,25 +79,35 @@
                 "unlinkedCollapsed": true
               }
             }
+          },
+          {
+            "id": "cd2bb94aa9a1edb1",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "notes/Ethereum Virtual Machine.md"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
-  "active": "e2827dba9f8071d7",
+  "active": "77ed1d6ac9653b6b",
   "lastOpenFiles": [
-    "notes/highlights.md",
-    "notes/What I'm Reading.md",
-    "highlights/Are we running out of resources-.md",
-    "private/stolen_articles/BowTiedFox/Productivity Masterclass.md",
-    "private/stolen_articles/Untitled.md",
-    "private/CJK + Latex Support (测试).md",
-    "private/editing.md",
-    "private/Governing as Gardening.md",
-    "private/PublicFeedback.md",
-    "notes/Trading Bots.md"
+    "Covalent Crypto.md",
+    "Hack Money (Eth.Global) Hackathon.md",
+    "assets/EVM_Structure_Layout.png",
+    "assets/Pasted image 20220419153157.png",
+    "highlights/BowTiedBull FAQ - Will Be Updated Over Time.md",
+    "highlights/How Elizabeth Loftus Changed the Meaning of Memory.md",
+    "highlights/Is Web3 a Solution Seeking a Problem-.md",
+    "highlights/Michael Plant - University of Oxford.md",
+    "highlights/Notes on Work.md",
+    "highlights/Opportunity, Risks and Going Down the Rabbit Hole.md"
   ]
 }

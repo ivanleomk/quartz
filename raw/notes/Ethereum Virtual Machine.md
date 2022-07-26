@@ -8,3 +8,5 @@ The Ethereum network exists solely for the purpose of keeping the single, contin
 
 # Stack
 The EVM survives as a 
+
+![[EVM_Structure_Layout.png]]

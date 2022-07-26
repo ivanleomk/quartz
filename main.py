@@ -7,7 +7,7 @@ import random
 import shutil 
 import csv
 from datetime import datetime
-
+from glob import glob
 
 
 
@@ -17,6 +17,10 @@ OUT_DIR = Path(os.path.join(Path.cwd(),"..","quartz","content"))
 DEFAULT_DRAFT = False
 TIMESTAMP_FILE = "./timestamp.csv"
 TIMESTAMP_HEADER = ["Name","Date"]
+file_extensions = [".png",".jpg"]
+root_dirs = ["/*","/*/*"]
+
+
 
 # --- CHANGE THE ABOVE, NOTHING BELOW THIS LINE ---
 
@@ -33,11 +37,12 @@ def sanitize_string(s):
     s = re.sub('-+', '-', s)
     return s.lower()
 
-def sanitize_link(link, files, verbose=True):
+def sanitize_link(link, files, verbose=False):
     """
     given some Wikilink in the form [[FILENAME#HEADER|VISIBLE]],
     translate to Markdown Link in the form [VISIBLE](FILENAME#HEADER)
     """
+    
     if verbose:
         print(f'Sanitizling link {link}')
     brace = link.find(']')
@@ -45,8 +50,21 @@ def sanitize_link(link, files, verbose=True):
     pipe = link.find('|')
     end_index = min([elt for elt in [brace, pound, pipe] if elt != -1])
     open_brace_index = 2
+
+    if("Layout" in link):
+        import pdb
+        pdb.set_trace()
+
     filename_portion = link[open_brace_index:end_index]
     visible_portion = filename_portion
+    
+    # We just want to check if the filename ends with a .jpg or a .png
+    extension = link[brace-3:brace]
+    if extension in file_extensions:
+        # We know it is in content
+        pass
+
+    
     if pipe != -1:
         visible_portion = link[pipe+1:brace]
     header = ''
@@ -58,7 +76,9 @@ def sanitize_link(link, files, verbose=True):
 
     # get relative filepath
     search_filename = sanitize_string(filename_portion)
+    
     rel_link = None
+    
     for file in files:
         if search_filename == file.stem:
             rel_link = file.relative_to(OUT_DIR.parent)
@@ -127,13 +147,14 @@ def sanitize_file_contents(path, files):
     with open(str(path), "w", encoding='utf-8') as f:
         links = re.findall('\[\[[^\]]*\]\]', old_text)
         sanitized_text = old_text
+        
         for link in links:
+
             sanitized_link = sanitize_link(link, files)
             escaped_special_chars_link = escape_re_special_characters(link)
             sanitized_text = re.sub(escaped_special_chars_link, sanitized_link, sanitized_text)
 
         f.write(sanitized_text)
-
 
 
 def sanitize_file_name(path):
@@ -170,20 +191,40 @@ def copy_and_overwrite(from_path, to_path):
     shutil.copytree(from_path, to_path)
 
 
+def copy_content_images():
+    content_images = os.path.join(ORIGINAL_IN_DIR,"assets")
+    
+    for image in os.listdir(content_images):
+        curr_path = os.path.join(IN_DIR,"assets",image)
+        new_path = os.path.join(OUT_DIR,"assets",image.lower())
+        shutil.copy(curr_path,new_path)
+
+
+
+
 if __name__ == '__main__':
     # First copy the obsidian
     copy_and_overwrite(ORIGINAL_IN_DIR,IN_DIR)
     if os.path.exists(OUT_DIR):
         shutil.rmtree(OUT_DIR)
     
+    # # Finds a list of all .jpg,.png files in the folder and copies them over to the content folder
+    # for dir in root_dirs:
+    #     for extension in file_extensions:
+    #         curr_path = "{}{}{}".format(ORIGINAL_IN_DIR,dir,extension)
+    #         print(curr_path)
+
     os.makedirs(OUT_DIR)
     os.makedirs(os.path.join(OUT_DIR,"notes"))
+    os.makedirs(os.path.join(OUT_DIR,"assets"))
     highlights = os.listdir(os.path.join(IN_DIR,"highlights"))
     highlights_path = os.path.join(OUT_DIR,"notes","highlights.md")
 
     if os.path.exists(highlights_path):
         os.remove(highlights_path)
     
+    copy_content_images()
+
     existing_data = {}
     new_data = {}
     with open(TIMESTAMP_FILE,'r') as file:
@@ -220,8 +261,6 @@ if __name__ == '__main__':
     for highlight in sorted_highlights:
         date = highlight[1]
         counts[f'01-{date.strftime("%m-%Y")}']+=1
-    
-
 
     with open(highlights_path,"w") as file:
         file.write("---\ntitle: Reading Highlights\n---\nA list of the {} Articles I've read so far\n\n".format(len(highlights)))
@@ -259,6 +298,6 @@ if __name__ == '__main__':
             writer.writerow([highlight,formatted_date])
 
 
-    renamed_files = [f for f in OUT_DIR.rglob("*") if Path(f).suffix == '.md']
-    for file in renamed_files:
-        sanitize_file_contents(file, renamed_files)
+    # renamed_files = [f for f in OUT_DIR.rglob("*") if Path(f).suffix == '.md']
+    # for file in renamed_files:
+    #     sanitize_file_contents(file, renamed_files)

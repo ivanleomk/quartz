@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Hack Money (Eth.Global) Hackathon.md",
+            "file": "notes/Ethereum Virtual Machine.md",
             "mode": "source",
             "source": false
           }
@@ -53,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 203
+    "width": 309.5
   },
   "right": {
     "id": "03be793b38f485fc",
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Hack Money (Eth.Global) Hackathon.md",
+                "file": "notes/Ethereum Virtual Machine.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Hack Money (Eth.Global) Hackathon.md"
+                "file": "notes/Ethereum Virtual Machine.md"
               }
             }
           }
@@ -97,17 +97,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "9620aa7376e4c991",
+  "active": "77ed1d6ac9653b6b",
   "lastOpenFiles": [
-    "Pasted image 20220419153157.png",
-    "Project Ideas.md",
-    "Hack Money (Eth.Global) Hackathon.md",
     "Covalent Crypto.md",
-    "notes/Building a Second Brain.md",
-    "notes/Building a Shopify App.md",
-    "notes/Atomic Kotlin.md",
-    "notes/The Millionare Fastlane.md",
-    "notes/Protocol List.md",
-    "notes/Technical Stuff.md"
+    "Hack Money (Eth.Global) Hackathon.md",
+    "assets/EVM_Structure_Layout.png",
+    "assets/Pasted image 20220419153157.png",
+    "highlights/BowTiedBull FAQ - Will Be Updated Over Time.md",
+    "highlights/How Elizabeth Loftus Changed the Meaning of Memory.md",
+    "highlights/Is Web3 a Solution Seeking a Problem-.md",
+    "highlights/Michael Plant - University of Oxford.md",
+    "highlights/Notes on Work.md",
+    "highlights/Opportunity, Risks and Going Down the Rabbit Hole.md"
   ]
 }
