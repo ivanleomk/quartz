@@ -51,18 +51,22 @@ def sanitize_link(link, files, verbose=False):
     end_index = min([elt for elt in [brace, pound, pipe] if elt != -1])
     open_brace_index = 2
 
-    if("Layout" in link):
-        import pdb
-        pdb.set_trace()
 
     filename_portion = link[open_brace_index:end_index]
     visible_portion = filename_portion
     
+    # if "Layout" in link:
+    #     import pdb
+    #     pdb.set_trace()
     # We just want to check if the filename ends with a .jpg or a .png
     extension = link[brace-3:brace]
-    if extension in file_extensions:
+    if f'.{extension}' in file_extensions:
+        removing_braces = re.sub('[^0-9a-zA-Z\-\._~]', '', link)
+        copied_loc =  f'[{removing_braces}](assets/{removing_braces})'
+        print(copied_loc)
+        return copied_loc
         # We know it is in content
-        pass
+        
 
     
     if pipe != -1:
@@ -87,6 +91,8 @@ def sanitize_link(link, files, verbose=False):
     # build Markdown link from Wikilink components and make all backslashes forward slashes
     sanitized_link = f'[{visible_portion}]' + f'({rel_link}{header})'
     sanitized_link = re.sub('\\\\', '/', sanitized_link)
+
+    print(sanitized_link)
     return sanitized_link
 
 def escape_re_special_characters(s):
@@ -298,6 +304,6 @@ if __name__ == '__main__':
             writer.writerow([highlight,formatted_date])
 
 
-    # renamed_files = [f for f in OUT_DIR.rglob("*") if Path(f).suffix == '.md']
-    # for file in renamed_files:
-    #     sanitize_file_contents(file, renamed_files)
+    renamed_files = [f for f in OUT_DIR.rglob("*") if Path(f).suffix == '.md']
+    for file in renamed_files:
+        sanitize_file_contents(file, renamed_files)
